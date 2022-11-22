@@ -3,6 +3,7 @@ include 'inc/header.php';
 include "model/config.php";
 $query = "select * from hang";
 $hang = getAll($query);
+
 ?>
 
 <!-- top breadcrumb -->
