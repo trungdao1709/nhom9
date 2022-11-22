@@ -1,4 +1,5 @@
-<?php
+
+<?php include 'controller/C_login.php';
 include 'inc/header.php';
 ?>
 
@@ -47,7 +48,16 @@ include 'inc/header.php';
                         <div class="return-customer">
                             <h3 class="mb-10 custom-title">returnng customer</h3>
                             <p class="mb-10"><strong>I am a returning customer</strong></p>
-                            <form action="#">
+                            <form action="login.php" method="post">
+                            <?php echo $err != "" ?  "
+            <div class='alert alert-danger' role='alert'>
+                Lỗi: $err
+            </div>
+        "
+        :
+        
+        ''
+        ?>
                                 <div class="form-group">
                                     <label>Email</label>
                                     <input type="text" name="email" placeholder="Enter your email address..." id="input-email" class="form-control">
@@ -57,7 +67,7 @@ include 'inc/header.php';
                                     <input type="text" name="pass" placeholder="Password" id="input-password" class="form-control">
                                 </div>
                                 <p class="lost-password"><a href="forgot-password.html">Forgot password?</a></p>
-                                <input type="submit" value="Login" class="return-customer-btn">
+                                <input type="submit" value="Login" class="return-customer-btn" name="btn_login">
                             </form>
                         </div>
                     </div>

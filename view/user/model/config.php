@@ -14,4 +14,5 @@
         $result = connect($query) -> fetch();
         return $result;
     }
+  
 ?>

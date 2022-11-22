@@ -81,9 +81,11 @@
                                     <i class="first-icon fa fa-user-circle"></i> My Account <i class="ion-ios-arrow-down"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="login.html">My Account</a></li>
+                                    <li><a href="../user/my_account.php">My Account</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="login.php">Sign in</a></li>
+                                    <li><a href="../user/login.php">Sign Out</a></li>
+
                                 </ul>
                             </div>
                         </div>
