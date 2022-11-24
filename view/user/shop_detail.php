@@ -44,16 +44,16 @@ $hang = getOne($query);
                         <div class="thumb-container">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#red" data-bs-toggle="tab">
-                                        <img src="<?php echo $hang["hinh_anh"]?>" alt="">
+                                        <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="">
                                     </a></li>
                                 <li><a href="#orange" data-bs-toggle="tab">
-                                        <img src="<?php echo $hang["hinh_anh"]?>" alt="">
+                                        <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="">
                                     </a></li>
                                 <li><a href="#yellow" data-bs-toggle="tab">
-                                        <img src="<?php echo $hang["hinh_anh"]?>" alt="">
+                                        <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="">
                                     </a></li>
                                 <li><a href="#green" data-bs-toggle="tab">
-                                        <img src="<?php echo $hang["hinh_anh"]?>" alt="">
+                                        <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="">
                                     </a></li>
                             </ul>
                         </div>
@@ -61,25 +61,25 @@ $hang = getOne($query);
                     <div class="product-cover">
                         <div class="tab-content">
                             <div class="tab-pane active" id="red">
-                                <img src="<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
+                                <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
                                 <div class="layer hidden-sm-down">
                                     <i class="material-icons zoom-in"></i>
                                 </div>
                             </div>
                             <div class="tab-pane" id="orange">
-                                <img src="<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
+                                <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
                                 <div class="layer hidden-sm-down">
                                     <i class="material-icons zoom-in"></i>
                                 </div>
                             </div>
                             <div class="tab-pane" id="yellow">
-                                <img src="<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
+                                <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
                                 <div class="layer hidden-sm-down">
                                     <i class="material-icons zoom-in"></i>
                                 </div>
                             </div>
                             <div class="tab-pane" id="green">
-                                <img src="<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
+                                <img src="assets/images/product/<?php echo $hang["hinh_anh"]?>" alt="harosa single product">
                                 <div class="layer hidden-sm-down">
                                     <i class="material-icons zoom-in"></i>
                                 </div>
@@ -115,14 +115,14 @@ $hang = getOne($query);
                     </div>
                     <div class="product-price h5 has-discount">
                         <div class="current-price">
-                            <span>$21.99</span>
+                            <span><?php echo $hang["gia"]?></span>
                             <span class="discount discount-percentage">Save 8%</span>
                         </div>
                     </div>
                 </div>
                 <div class="product-information">
                     <div class="product-desc">
-                        <p><span>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </span></p>
+                        <p><span><?php echo $hang["mo_ta"]?></span></p>
                     </div>
                     <div class="product-actions">
                         <form action="#">
