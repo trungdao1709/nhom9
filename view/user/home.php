@@ -393,3 +393,5 @@ $hang = getAll($query);
                 <?php
                 include 'inc/footer.php'
                 ?>
+            </div>
+        </footer>

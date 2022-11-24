@@ -141,7 +141,7 @@ if(isset($_POST['filter_btn'])){
                         <h3>Arts & Crafts</h3>
                     </div>
                     <div class="product-filter mb-30">
-                        
+                    
                     </div>
 
                     <div class="advertising">
