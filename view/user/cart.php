@@ -71,8 +71,7 @@ include "inc/header.php";
                         <!-- Cart Button Start -->
                         <div class="col-md-8 col-sm-7">
                             <div class="buttons-cart">
-                                <input type="submit" value="Update Cart">
-                                <a href="#">Continue Shopping</a>
+                                <a href="shop.php">Continue Shopping</a>
                             </div>
                         </div>
                         <!-- Cart Button Start -->

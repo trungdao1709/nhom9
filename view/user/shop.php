@@ -59,114 +59,39 @@ $hang = getAll($query);
                         <div id="grid" class="tab-pane fade show active">
                             <div class="row">
                                 <!-- single product -->
-                               <?php foreach ( $hang as $key => $value) : ?>
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>"  alt="harosa product">
-                                            </a>
-                                            <div class="quick-view">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product_desc">
-                                            <h1> <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"]?></a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price price-sale">$<?php echo $value["gia"]?></span>
-                                            </div>
-                                            <div class="cart">
-                                                <div class="product-add-to-cart">
-                                                    <a href="cart.php">Add to cart</a>
+                                <?php foreach ($hang as $key => $value) : ?>
+                                    <form action="../../view/user/controller/cart/add_cart.php" method="POST">
+                                        <div class="col-sm-6 col-md-6 col-lg-4">
+                                            <div class="product-miniature js-product-miniature">
+                                                <div class="img_block">
+                                                    <input type="hidden" name="id" value="<?php echo $value["id"] ?>">
+                                                    <input type="hidden" name="image" value="<?php echo $value["hinh_anh"] ?>">
+                                                    <input type="hidden" name="name" value="<?php echo $value["ten_hang"] ?>">
+                                                    <input type="hidden" name="gia" value="<?php echo $value["gia"] ?>">
+                                                    <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
+                                                        <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>" alt="harosa product">
+                                                    </a>
+                                                    <div class="quick-view">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_desc">
+                                                    <h1> <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"] ?></a></h1>
+                                                    <div class="product-price-and-shipping">
+                                                        <span class="price price-sale">$<?php echo $value["gia"] ?></span>
+                                                    </div>
+                                                    <div class="cart">
+                                                        <div class="product-add-to-cart">
+                                                            <a href="cart.php" name="addcart">Add to cart</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </form>
                                 <?php endforeach ?>
                                 <!-- single product end -->
-                                <!-- single product -->
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="single-product.html" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/2.webp" alt="harosa product">
-                                            </a>
-                                            <div class="quick-view">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                            </div>
-                                            <div class="hook-reviews">
-                                                <div class="comments_note">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="shop.html">Studio Design</a>
-                                            </div>
-                                            <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="regular-price">$23.90</span>
-                                                <span class="price price-sale">$21.99</span>
-                                            </div>
-                                            <div class="cart">
-                                                <div class="product-add-to-cart">
-                                                    <a href="cart.html">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-                                <!-- single product -->
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="single-product.html" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/3.webp" alt="harosa product">
-                                            </a>
-                                            <div class="quick-view">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                            </div>
-                                            <div class="hook-reviews">
-                                                <div class="comments_note">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                            </div>
-                                            <div class="product-price-and-shipping_top">
-                                                <span class="discount-percentage discount-product">-8%</span>
-                                            </div>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="shop.html">Studio Design</a>
-                                            </div>
-                                            <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="regular-price">$23.90</span>
-                                                <span class="price price-sale">$21.99</span>
-                                            </div>
-                                            <div class="cart">
-                                                <div class="product-add-to-cart">
-                                                    <a href="cart.html">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single product end -->
-
-
-
+                                
                             </div>
                         </div>
 
