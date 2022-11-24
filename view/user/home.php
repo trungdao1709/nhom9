@@ -1,5 +1,8 @@
 <?php
-include 'inc/header.php'
+include 'inc/header.php';
+include './model/config.php';
+$query = "select * from hang";
+$hang = getAll($query);
 ?>
 
 
@@ -60,7 +63,6 @@ include 'inc/header.php'
                 </div>
             </div>
         </div>
-
         <nav class="canvas-menu">
             <ul>
                 <li class="current"><a href="index.html">Home</a>
@@ -113,7 +115,6 @@ include 'inc/header.php'
                 </li>
             </ul>
         </nav>
-
         <div class="social_follow">
             <ul>
                 <li class="facebook"><a href="#"></a></li>
@@ -127,7 +128,6 @@ include 'inc/header.php'
     </div>
 </div>
 <!-- offcanvas END -->
-
 <!-- Slider area -->
 <div class="slider-area home-three">
     <!-- slider start -->
@@ -166,7 +166,6 @@ include 'inc/header.php'
     <!-- slider end -->
 </div>
 <!-- Slider area end -->
-
 <!-- product tabs container slider -->
 <div class="product-tabs-container-slider product_block_container">
     <div class="container">
@@ -176,1066 +175,223 @@ include 'inc/header.php'
             <li><a href="#bestseller" data-toggle="tab">Bestseller</a></li>
             <li><a href="#featuredproducts" data-toggle="tab">Featured Products</a></li>
         </ul>
-
         <div class="tab-content pos_content">
             <div class="tab-pane fade show active" id="newarrival">
                 <div class="productTabContent0 owl-carousel">
                     <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/1.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
+                    <?php foreach ($hang as $key => $value) : ?>
+                        <div class="item-product">
+                            <div class="product-miniature js-product-miniature">
+                                <div class="img_block">
+                                    <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
+                                        <img src="assets/images/product/<?php echo $value["hinh_anh"] ?>" alt="harosa product">
+                                    </a>
+                                    <div class="quick-view">
+                                        <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
                                     </div>
                                 </div>
-                                <div class="product-price-and-shipping_top">
-                                    <span class="discount-percentage discount-product">-8%</span>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
+                                <div class="product_desc">
+
+                                    <h1> <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"] ?></a></h1>
+                                    <div class="product-price-and-shipping">
+                                        <span class="price price-sale"><?php echo $value["gia"] ?></span>
+                                    </div>
+                                    <div class="cart">
+                                        <div class="product-add-to-cart">
+                                            <a href="cart.html">Add to cart</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/2.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/3.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/4.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/9.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/10.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                </div>
-            </div>
-            <div class="tab-pane fade" id="bestseller">
-                <div class="productTabContent0 owl-carousel">
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/1.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                                <div class="product-price-and-shipping_top">
-                                    <span class="discount-percentage discount-product">-8%</span>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/2.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/3.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/4.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/9.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/10.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                </div>
-            </div>
-            <div class="tab-pane fade" id="featuredproducts">
-                <div class="productTabContent0 owl-carousel">
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/1.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                                <div class="product-price-and-shipping_top">
-                                    <span class="discount-percentage discount-product">-8%</span>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/2.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/3.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/4.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/9.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product end -->
-                    <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
-                            <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/10.webp" alt="harosa product">
-                                </a>
-                                <ul class="product-flag">
-                                    <li class="new"><span>New</span></li>
-                                </ul>
-                                <div class="quick-view">
-                                    <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
-                                    <div class="comments_note">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
-                                    <a href="shop.html">Studio Design</a>
-                                </div>
-                                <h1> <a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
-                                    <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
-                                    <div class="product-add-to-cart">
-                                        <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach ?>
                     <!-- single product end -->
                 </div>
             </div>
         </div>
-
-    </div>
-</div>
-<!-- product tabs container slider end -->
-
-<!-- cms aboutus -->
-<div class="cms_aboutus">
-    <img src="assets/images/bg/1_3.webp" alt="" class="img-responsive">
-    <div class="cms-info">
-        <div class="container">
-            <div class="cms-desc">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="info-content">
-                            <h4>About Us</h4>
-                            <h2>Welcome <span>Harosa</span> Store.</h2>
-                            <p>Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="assets/images/service/2_3.webp" alt="" class="img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- cms aboutus end -->
-
-<!-- pos special products  -->
-<div class="home-two home-three">
-    <div class="pos-special-products">
-        <div class="container">
-            <div class="special-products">
-                <div class="pos_title">
-                    <h2>Daily Deals</h2>
-                </div>
-                <div class="special-item1 pos_content owl-carousel">
-                    <!-- special item -->
-                    <div class="product-miniature js-product-miniature">
-                        <div class="img_block">
-                            <a href="single-product.html" class="thumbnail product-thumbnail">
-                                <img src="assets/images/product/2-2.webp" alt="harosa product">
-                            </a>
-                            <ul class="product-flag">
-                                <li class="new"><span>New</span></li>
-                            </ul>
-                            <div class="quick-view">
-                                <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                            </div>
-                            <div class="hook-reviews">
-                                <div class="comments_note">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
+        <!-- cms aboutus -->
+        <div class="cms_aboutus">
+            <img src="assets/images/bg/1_3.webp" alt="" class="img-responsive">
+            <div class="cms-info">
+                <div class="container">
+                    <div class="cms-desc">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="info-content">
+                                    <h4>About Us</h4>
+                                    <h2>Welcome <span>Harosa</span> Store.</h2>
+                                    <p>Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus</p>
+                                    <a href="#">Read More</a>
                                 </div>
                             </div>
-                            <div class="product-price-and-shipping_top">
-                                <span class="discount-percentage discount-product">-8%</span>
+                            <div class="col-md-4">
+                                <img src="assets/images/service/2_3.webp" alt="" class="img-responsive">
                             </div>
-                        </div>
-                        <div class="product_desc">
-                            <h1><a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                            <div class="manufacturer">
-                                <a href="shop.html">Studio Design</a>
-                            </div>
-                            <div class="product-desc">
-                                <p><span>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </span></p>
-                            </div>
-                            <div class="product-price-and-shipping">
-                                <span class="regular-price">$23.90</span>
-                                <span class="price price-sale">$21.99</span>
-                            </div>
-                            <div class="cart">
-                                <div class="product-add-to-cart">
-                                    <a href="cart.html">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown">
-                            <div class="time_count_down">
-                                <div data-countdown="2022/08/02"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- special item end -->
-                    <!-- special item -->
-                    <div class="product-miniature js-product-miniature">
-                        <div class="img_block">
-                            <a href="single-product.html" class="thumbnail product-thumbnail">
-                                <img src="assets/images/product/2-2.webp" alt="harosa product">
-                            </a>
-                            <ul class="product-flag">
-                                <li class="new"><span>New</span></li>
-                            </ul>
-                            <div class="quick-view">
-                                <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                            </div>
-                            <div class="hook-reviews">
-                                <div class="comments_note">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="product-price-and-shipping_top">
-                                <span class="discount-percentage discount-product">-8%</span>
-                            </div>
-                        </div>
-                        <div class="product_desc">
-                            <h1><a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                            <div class="manufacturer">
-                                <a href="shop.html">Studio Design</a>
-                            </div>
-                            <div class="product-desc">
-                                <p><span>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </span></p>
-                            </div>
-                            <div class="product-price-and-shipping">
-                                <span class="regular-price">$23.90</span>
-                                <span class="price price-sale">$21.99</span>
-                            </div>
-                            <div class="cart">
-                                <div class="product-add-to-cart">
-                                    <a href="cart.html">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown">
-                            <div class="time_count_down">
-                                <div data-countdown="2022/08/02"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- special item end -->
-                    <!-- special item -->
-                    <div class="product-miniature js-product-miniature">
-                        <div class="img_block">
-                            <a href="single-product.html" class="thumbnail product-thumbnail">
-                                <img src="assets/images/product/2-3.webp" alt="harosa product">
-                            </a>
-                            <ul class="product-flag">
-                                <li class="new"><span>New</span></li>
-                            </ul>
-                            <div class="quick-view">
-                                <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                            </div>
-                            <div class="hook-reviews">
-                                <div class="comments_note">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="product-price-and-shipping_top">
-                                <span class="discount-percentage discount-product">-8%</span>
-                            </div>
-                        </div>
-                        <div class="product_desc">
-                            <h1><a href="single-product.html" class="product_name" title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                            <div class="manufacturer">
-                                <a href="shop.html">Studio Design</a>
-                            </div>
-                            <div class="product-desc">
-                                <p><span>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </span></p>
-                            </div>
-                            <div class="product-price-and-shipping">
-                                <span class="regular-price">$23.90</span>
-                                <span class="price price-sale">$21.99</span>
-                            </div>
-                            <div class="cart">
-                                <div class="product-add-to-cart">
-                                    <a href="cart.html">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown">
-                            <div class="time_count_down">
-                                <div data-countdown="2022/08/02"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- special item end -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- pos special products end -->
-
-<!-- cms info  -->
-<div class="cms_info">
-    <img src="assets/images/bg/1_2.webp" alt="" class="img-responsive">
-    <div class="cms_container">
-        <div class="container">
-            <div class="info_content">
-                <p class="txt1">Something mystic, Something magical...</p>
-                <h2>Natural Spa</h2>
-                <p class="phone">(+08) 123 456 7890</p>
-                <p class="txt2">Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor, lacus in luctus molestie</p>
-                <a href="#">Shop Collection in new year</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- cms info end -->
-
-<!-- home banner -->
-<div class="home-banner">
-    <div class="container-fluid p-0">
-        <div class="row g-0">
-            <div class="col-md-6">
-                <div class="banner-box m-0">
-                    <a href="shop.html"><img src="assets/images/banner/1_1.webp" alt="harosa"></a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="banner-box m-0">
-                    <a href="shop.html"><img src="assets/images/banner/2_1.webp" alt="harosa"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- home banner end -->
-<!-- footer start -->
-<footer id="footer">
-    <div class="footer-container">
-        <div class="footer-top">
-            <div class="container">
-                <div class="ft_newsletter">
-                    <div id="block-newsletter-label">
-                        <div class="title-newsletter">
-                            <h2>Newsletter sign up</h2>
-                            <p class="desc">(Get 30% OFF coupon today subscibers)</p>
-                        </div>
-                    </div>
-                    <form action="#">
-                        <input class="btn btn-primary float-xs-right hidden-xs-down" name="submitNewsletter" value="Subscribe" type="submit">
-                        <div class="input-wrapper">
-                            <input name="email" value="" placeholder="Your email address" aria-labelledby="block-newsletter-label" type="text">
-                        </div>
-                    </form>
-                </div>
-                <div class="pos_logo product_block_container">
-                    <div class="logo-slider owl-carousel pos_content">
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/1.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/2.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/3.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/4.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/5.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/6.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/1.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/2.webp" alt="harosa brand logo">
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- cms aboutus end -->
+        <!-- pos special products  -->
+        <div class="home-two home-three">
+            <div class="pos-special-products">
+                <div class="container">
+                    <div class="special-products">
+                        <div class="pos_title">
+                            <h2>Daily Deals</h2>
+                        </div>
+                        <div class="special-item1 pos_content owl-carousel">
+                            <!-- special item -->
+                            <?php foreach ($hang as $key => $value) : ?>
+                                <div class="product-miniature js-product-miniature">
+                                    <div class="img_block">
+                                        <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
+                                            <img src="assets/images/product/<?php echo $value["hinh_anh"] ?>" alt="harosa product">
+                                        </a>
+                                        <ul class="product-flag">
+                                            <li class="new"><span>New</span></li>
+                                        </ul>
+                                        <div class="quick-view">
+                                            <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
+                                        </div>
+                                        <div class="product-price-and-shipping_top">
+                                            <span class="discount-percentage discount-product">-8%</span>
+                                        </div>
 
+                                    </div>
+                                    <div class="product_desc">
+                                        <h1><a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"] ?></a></h1>
 
-        <?php
-        include 'inc/footer.php'
-        ?>
+                                        <div class="product-desc">
+                                            <p><span><?php echo $value["mo_ta"] ?> </span></p>
+                                        </div>
+                                        <div class="product-price-and-shipping">
+
+                                            <span class="price price-sale"><?php echo $value["gia"] ?></span>
+                                        </div>
+                                        <div class="cart">
+                                            <div class="product-add-to-cart">
+                                                <a href="cart.html">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="countdown">
+                                        <div class="time_count_down">
+                                            <div data-countdown="<?php echo $value["ngay_nhap"] ?>"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- special item end -->
+                            <?php endforeach ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pos special products end -->
+        <!-- cms info  -->
+        <div class="cms_info">
+            <img src="assets/images/bg/1_2.webp" alt="" class="img-responsive">
+            <div class="cms_container">
+                <div class="container">
+                    <div class="info_content">
+                        <p class="txt1">Something mystic, Something magical...</p>
+                        <h2>Natural Spa</h2>
+                        <p class="phone">(+08) 123 456 7890</p>
+                        <p class="txt2">Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor, lacus in luctus molestie</p>
+                        <a href="#">Shop Collection in new year</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cms info end -->
+        <!-- home banner -->
+        <div class="home-banner">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="banner-box m-0">
+                            <a href="shop.html"><img src="assets/images/banner/1_1.webp" alt="harosa"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="banner-box m-0">
+                            <a href="shop.html"><img src="assets/images/banner/2_1.webp" alt="harosa"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- home banner end -->
+        <!-- footer start -->
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="ft_newsletter">
+                            <div id="block-newsletter-label">
+                                <div class="title-newsletter">
+                                    <h2>Newsletter sign up</h2>
+                                    <p class="desc">(Get 30% OFF coupon today subscibers)</p>
+                                </div>
+                            </div>
+                            <form action="#">
+                                <input class="btn btn-primary float-xs-right hidden-xs-down" name="submitNewsletter" value="Subscribe" type="submit">
+                                <div class="input-wrapper">
+                                    <input name="email" value="" placeholder="Your email address" aria-labelledby="block-newsletter-label" type="text">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="pos_logo product_block_container">
+                            <div class="logo-slider owl-carousel pos_content">
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/1.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/2.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/3.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/4.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/5.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/6.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/1.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/2.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                include 'inc/footer.php'
+                ?>
+            </div>
+        </footer>
