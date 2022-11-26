@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -42,6 +40,9 @@ session_start();
 
 </head>
 <body>
+    <?php
+    session_start();
+    ?>
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->

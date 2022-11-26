@@ -60,7 +60,7 @@ $hang = getAll($query);
                             <div class="row">
                                 <!-- single product -->
                                 <?php foreach ($hang as $key => $value) : ?>
-                                    <form action="../../view/user/controller/cart/add_cart.php" method="POST">
+                                    <form action="../user/controller/cart/add_cart.php" method="POST">
                                         <div class="col-sm-6 col-md-6 col-lg-4">
                                             <div class="product-miniature js-product-miniature">
                                                 <div class="img_block">
@@ -82,7 +82,7 @@ $hang = getAll($query);
                                                     </div>
                                                     <div class="cart">
                                                         <div class="product-add-to-cart">
-                                                            <a href="cart.php" name="addcart">Add to cart</a>
+                                                            <a><button type='submit' name="addcart">Add to cart</button></a>
                                                         </div>
                                                     </div>
                                                 </div>
