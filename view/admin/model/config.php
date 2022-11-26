@@ -14,4 +14,8 @@
         $result = connect($query) -> fetch();
         return $result;
     }
-?>
+    $role = [
+        "admin" => "admin",
+        "user" => "user"
+    ]; 
+?> 
