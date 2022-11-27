@@ -4,7 +4,6 @@ include "model/config.php";
 $id= $_GET['id'];
 $query = "select * from hang where id = $id";
 $hang = getOne($query);
-
 ?>
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
@@ -111,11 +110,11 @@ $hang = getOne($query);
                 </div>
                 <div class="product-prices">
                     <div class="product-discount">
-                        <span class="regular-price">$23.90</span>
+                        <span class="regular-price"></span>
                     </div>
                     <div class="product-price h5 has-discount">
                         <div class="current-price">
-                            <span><?php echo $hang["gia"]?></span>
+                            <span>$<?php echo $hang["gia"]?></span>
                             <span class="discount discount-percentage">Save 8%</span>
                         </div>
                     </div>
@@ -136,22 +135,7 @@ $hang = getOne($query);
                                         <option value="4" title="XL">XL</option>
                                     </select>
                                 </div>
-                                <div class="product-variants-item">
-                                    <span class="control-label">Color</span>
-                                    <ul id="group_2">
-                                        <li class="float-xs-left input-container">
-                                            <label>
-                                                <input class="input-color" data-product-attribute="2" name="group[2]" value="8" checked="checked" type="radio">
-                                                <span class="color"><span class="sr-only">White</span></span>
-                                            </label>
-                                        </li>
-                                        <li class="float-xs-left input-container">
-                                            <label>
-                                                <input class="input-color" data-product-attribute="2" name="group[2]" value="11" type="radio">
-                                                <span class="color color-two"><span class="sr-only">Black</span></span>
-                                            </label>
-                                        </li>
-                                    </ul>
+                                <div class="product-variants-item">    
                                 </div>
                             </div>
                             <div class="product-discounts"></div>
@@ -159,7 +143,7 @@ $hang = getOne($query);
                                 <span class="control-label">Quantity</span>
                                 <div class="box-quantity d-flex">
                                     <input class="quantity mr-40" min="1" value="1" type="number">
-                                    <a class="add-cart" href="cart.html"><i class="fa fa-shopping-cart"></i>add to cart</a>
+                                    <a class="add-cart" href="cart.php"><i class="fa fa-shopping-cart"></i>add to cart</a>
                                 </div>
                             </div>
                             <div class="product-additional-info">
