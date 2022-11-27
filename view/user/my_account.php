@@ -22,7 +22,7 @@ include "model/account.php";
             </div>
             <div class="mb-3 col">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" name='email'  class="form-control" disabled placeholder="exampleInputEmail1" aria-describedby="emailHelp"  value='<?php echo $currentAcc['tai_koan']?>' >
+                <input type="email" name='email'  class="form-control" disabled placeholder="exampleInputEmail1" aria-describedby="emailHelp"  value='<?php echo $currentAcc['tai_khoan']?>' >
             </div>
         </div>
         <div class="row">

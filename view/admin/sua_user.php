@@ -33,7 +33,7 @@ $user = getOne($query);
                                 </div>
                                 <div class="mb-3 col">
                                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control" value='<?php echo $user["tai_koan"] ?>'value="ddddddd">
+                                    <input type="email" name="email" class="form-control" value='<?php echo $user["tai_khoan"] ?>'value="ddddddd">
                                 </div>
                             </div>
                             <div class='row'>

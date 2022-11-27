@@ -8,7 +8,7 @@
     $img = $_FILES["img"]["name"];
 
     $id= $_POST["id"];
-    $query = "UPDATE user SET ten = '$name', tai_koan ='$email', mat_khau='$pass', vai_tro = '$role', hinh = '$img' where id=$id";
+    $query = "UPDATE user SET ten = '$name', tai_khoan ='$email', mat_khau='$pass', vai_tro = '$role', hinh = '$img' where id=$id";
     connect($query);
     move_uploaded_file($_FILES["img"]["tmp_name"],"../../assets/img/".$_FILES["img"]["name"]);
 
