@@ -1,6 +1,7 @@
-<?php
-    session_start(); //bắt đầu session để lấy thông tin
-    session_destroy();//xóa toàn bộ dữ liệu được lưu trữ trong session
-    header("location:/view/user/login.php");//điều hướng về trang login.php
-?>
-<!-- <img src="/view/user/login.php" alt=""> -->
+<?php 
+// session_start();
+            if($_SESSION["user"]){
+                session_unset();
+                $yourURL="http://localhost/nhom9/view/user/login.php";
+                echo ("<script>location.href='$yourURL'</script>");
+            }

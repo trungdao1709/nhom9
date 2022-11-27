@@ -2,7 +2,6 @@
   include "layout/header.php";
 ?>
 
-
 <div class="progress-widget">
   <div class="progress-data"><span class="progress-value">60%</span><span class="name">Current Project</span></div>
   <div class="progress">

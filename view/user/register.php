@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <?php include 'inc/header.php';
 include "controller/C_Register.php" ?>
 

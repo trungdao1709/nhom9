@@ -49,6 +49,7 @@ include 'inc/header.php';
                             <h3 class="mb-10 custom-title">returnng customer</h3>
                             <p class="mb-10"><strong>I am a returning customer</strong></p>
                             <form action="login.php" method="post">
+                  
                             <?php echo $err != "" ?  "
             <div class='alert alert-danger' role='alert'>
                 Lỗi: $err
