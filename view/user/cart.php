@@ -1,6 +1,18 @@
 <?php
-include "inc/header.php";
+    session_start();
+    // session_destroy();
+    include "inc/header.php";   
+    // var_dump($_SESSION['cart']);
+    if(isset($_SESSION['cart'])){
+        $cart = $_SESSION['cart'];
+        // print_r($cart) ;
+        // var_dump($_SESSION['cart']);
+    }
+    else {
+        echo 'chuwa co gio hang';
+    }
 ?>
+
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
     <div class="breadcrumb_container ">
@@ -9,7 +21,7 @@ include "inc/header.php";
                 <ol>
                     <li>
                         <a href="#">
-                            <span>Home</span>
+                            <span>Home </span>
                         </a>
                     </li>
                     <li>
@@ -39,32 +51,35 @@ include "inc/header.php";
                             <th class="product-price">Price</th>
                             <th class="product-quantity">Quantity</th>
                             <th class="product-subtotal">Total</th>
-                            <th class="product-remove">Remove</th>
+                            <th class="product-remove">Remove </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($_SESSION['mycart'] as $key => $cart) : ?>
+                       <?php 
+                        $tong=0;
+                       foreach($cart as $value => $items){
+                        $tt=$items['gia'] * $items['so_luong'];
+                        $tong+=$tt;
+                        $xoasp='<a onclick="return confirm("Bạn có chắc muốn xóa ??")" href="./controller/cart/delete_cart.php?id='.$items['id'].'">
+                        <button>Xoa</button></a>';
+                        echo'
                             <tr>
                                 <td class="product-thumbnail">
-                                    <a href="#"><img src="assets/images/product/<?php echo $cart[2] ?>" alt="cart-image"></a>
+                                    <a href="#"><img src="assets/images/product/'.$items['image'].'" alt="cart-image"></a>
                                 </td>
-                                <td class="product-name"><a href="#"><?php echo $cart[3] ?></a></td>
-                                <td class="product-price"><span class="amount"><?php echo $cart[4] ?></span></td>
-                                <td class="product-quantity"><input type="number" value="<?php echo $cart[5] ?>"></td>
-                                <td class="product-subtotal"><?php echo $cart[6] ?></td>
-                                <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
-                            </tr>
-                        <?php endforeach ?>
-                        <tr>
-                            <td class="product-thumbnail">
-                                <a href="#"><img src="assets/images/product/2.webp" alt="cart-image"></a>
-                            </td>
-                            <td class="product-name"><a href="#">Carte Postal Clock</a></td>
-                            <td class="product-price"><span class="amount">£50.00</span></td>
-                            <td class="product-quantity"><input type="number" value="1"></td>
-                            <td class="product-subtotal">£50.00</td>
-                            <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
-                        </tr>
+                                <td class="product-name"><a href="#">'.$items['name'].'</a></td>
+                                <td class="product-price"><span class="amount">'.$items['gia'].'</span></td>
+                                <td class="product-quantity"><input type="number" value="'.$items['so_luong'].'"></td>
+                                <td class="product-subtotal">$'.$tt.'</td>
+                                <td class="product-remove">
+                                    <a onclick="return confirm("Bạn có chắc muốn xóa ??")" href="controller/cart/delete_cart.php?id='.$value.'">
+                                        Xoa
+                                    </a>
+                                </td>
+                            </tr>'
+                        ;
+                       }
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -73,6 +88,7 @@ include "inc/header.php";
                 <!-- Cart Button Start -->
                 <div class="col-md-8 col-sm-7">
                     <div class="buttons-cart">
+                    <input type="submit" value="Update Cart">
                         <a href="shop.php">Continue Shopping</a>
                     </div>
                 </div>
@@ -86,12 +102,12 @@ include "inc/header.php";
                             <tbody>
                                 <tr class="cart-subtotal">
                                     <th>Subtotal</th>
-                                    <td><span class="amount">$215.00</span></td>
+                                    <td><span class="amount">$<?php echo $tong?></span></td>
                                 </tr>
                                 <tr class="order-total">
                                     <th>Total</th>
                                     <td>
-                                        <strong><span class="amount">$215.00</span></strong>
+                                        <strong><span class="amount">$<?php echo $tong?></span></strong>
                                     </td>
                                 </tr>
                             </tbody>

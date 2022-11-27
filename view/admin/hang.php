@@ -176,7 +176,7 @@ $hang = getAll($query);
                                                 <li>
                                                     <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
                                                         <input class="custom-control-input" type="checkbox" id="tck4">
-                                                        <label class="custom-control-label" for="tck4">Initialize the project </label>
+                                                        <label class="custom-control-label" for="tck4">Initialize the project</label>
                                                     </div>
                                                 </li>
                                                 <li>
