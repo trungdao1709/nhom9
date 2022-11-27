@@ -1,35 +1,11 @@
 <?php
 include 'inc/header.php';
 include "model/config.php";
-function getCategory(){
-    $sql = 'SELECT * FROM loai_hang';
-    return getAll($sql);
-}
-function findCategory($id){
-    $sql = "SELECT * FROM hang WHERE id_loai_hang  ='$id'";
-    return getAll($sql);
-}
-$allCate = getCategory();
-if(isset($_POST["search"])){
-    $search=$_POST["input_search"];
-    $querySearch="select * from hang where ten_hang like '%$search%'";
-    $hang= getAll($querySearch);
-    
-} else{
-    $query = "select * from hang";
+$query = "select * from hang";
 $hang = getAll($query);
-}
-if(isset($_POST['filter_btn'])){
-    $filter = $_POST['filter'];
-    if($filter == 'all'){
-        $querySearch="select * from hang where ten_hang like '%$search%'";
-        $hang= getAll($querySearch);
-    }else{
-        $hang = findCategory($filter);
-    }
 
-}
 ?>
+
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
     <div class="breadcrumb_container ">
@@ -42,16 +18,11 @@ if(isset($_POST['filter_btn'])){
                     <li><a href="#"><span>Shop</span></a></li>
                 </ol>
             </nav>
-            <div class="woocommerce-ordering">
-                <form method="POST" action="./shop.php">
-                    <input class="text_input" value="" name="input_search" placeholder="Search" type="text">
-                    <button type="submit" name="search"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
         </div>
     </div>
 </div>
 <!-- top breadcrumb end -->
+
 <!-- Shop page wraper -->
 <div class="shop-page-wraper">
     <div class="container">
@@ -69,18 +40,18 @@ if(isset($_POST['filter_btn'])){
                             </ul>
                         </div>
                         <div class="woocommerce-ordering">
-                            <form method="post" class="woocommerce-ordering hidden-xs d-flex ">
+                            <form method="get" class="woocommerce-ordering hidden-xs">
                                 <div class="orderby-wrapper">
-                                    <label>Phân loại :</label>
-                                    <select class="nice-select-menu orderby" name='filter' type='submit'>
-                                        <option dara-display="Select" value ='all'>Tất cả</option>
-                                        <?php foreach($allCate as $value):?>
-                                            <option value="<?php echo $value['id']?>"><?php echo $value['ten_loai_hang']?></option>
-                                        <?php endforeach?>
-                                        
+                                    <label>Sort By :</label>
+                                    <select class="nice-select-menu orderby">
+                                        <option dara-display="Select">Default sorting</option>
+                                        <option value="popularity">Sort by popularity</option>
+                                        <option value="rating">Sort by average rating</option>
+                                        <option value="date">Sort by newness</option>
+                                        <option value="price">Sort by price: low to high</option>
+                                        <option value="price-desc">Sort by price: high to low</option>
                                     </select>
                                 </div>
-                                <button name='filter_btn' class='bg-white d-flex align-items-center'><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>
@@ -88,39 +59,82 @@ if(isset($_POST['filter_btn'])){
                         <div id="grid" class="tab-pane fade show active">
                             <div class="row">
                                 <!-- single product -->
-                               <?php foreach ( $hang as $key => $value) : ?>
-                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                <?php foreach ($hang as $key => $value) : ?>
+                                    <form action="../user/controller/cart/add_cart.php" method="POST">
+                                        <div class="col-sm-6 col-md-6 col-lg-4">
+                                            <div class="product-miniature js-product-miniature">
+                                                <div class="img_block">
+                                                    <input type="hidden" name="id" value="<?php echo $value["id"] ?>">
+                                                    <input type="hidden" name="image" value="<?php echo $value["hinh_anh"] ?>">
+                                                    <input type="hidden" name="name" value="<?php echo $value["ten_hang"] ?>">
+                                                    <input type="hidden" name="gia" value="<?php echo $value["gia"] ?>">
+                                                    <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
+                                                        <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>" alt="harosa product">
+                                                    </a>
+                                                    <div class="quick-view">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_desc">
+                                                    <h1> <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"] ?></a></h1>
+                                                    <div class="product-price-and-shipping">
+                                                        <span class="price price-sale">$<?php echo $value["gia"] ?></span>
+                                                    </div>
+                                                    <div class="cart">
+                                                        <div class="product-add-to-cart">
+                                                            <a><button type='submit' name="addcart">Add to cart</button></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                <?php endforeach ?>
+                                <!-- single product end -->
+                            </div>
+                        </div>
+
+                        <div id="list" class="tab-pane fade">
+                            <div class="row">
+                                <!-- single product list view -->
+                                <?php foreach ($hang as $key => $value) : ?>
+                                    <form action="../user/controller/cart/add_cart.php" method="POST">
+                                <div class="col-md-12">
                                     <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
+                                        <input type="hidden" name="id" value="<?php echo $value["id"] ?>">
+                                                    <input type="hidden" name="image" value="<?php echo $value["hinh_anh"] ?>">
+                                                    <input type="hidden" name="name" value="<?php echo $value["ten_hang"] ?>">
+                                                    <input type="hidden" name="gia" value="<?php echo $value["gia"] ?>">
                                             <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>"  alt="harosa product">
+                                                <img src="assets/images/product/<?php echo $value['hinh_anh']?>" alt="harosa product">
                                             </a>
+                                            <ul class="product-flag">
+                                                <li class="new"><span>New</span></li>
+                                            </ul>
                                             <div class="quick-view">
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
                                             </div>
                                         </div>
                                         <div class="product_desc">
-                                            <h1> <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"]?></a></h1>
+                                            <h1><a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"] ?></a></h1>
+                                            <div class="product-desc">
+                                                <p><span><?php echo $value["mo_ta"] ?></span></p>
+                                            </div>
                                             <div class="product-price-and-shipping">
-                                                <span class="price price-sale">$<?php echo $value["gia"]?></span>
+                                                <span class="price price-sale"><?php echo $value["gia"] ?></span>
                                             </div>
                                             <div class="cart">
                                                 <div class="product-add-to-cart">
-                                                    <a href="cart.php">Add to cart</a>
+                                                <a><button type='submit' name="addcart">Add to cart</button></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </form>
                                 <?php endforeach ?>
-                                <!-- single product end -->
-                            </div>
-                        </div>
-                        <div id="list" class="tab-pane fade">
-                            <div class="row">
-                               
-                                
-                               
+                                <!-- single product list view end -->
                             </div>
                         </div>
                     </div>
@@ -141,7 +155,19 @@ if(isset($_POST['filter_btn'])){
                         <h3>Arts & Crafts</h3>
                     </div>
                     <div class="product-filter mb-30">
-                    
+                        <div class="widget-title">
+                            <h3>Filter by price</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div id="price-range"></div>
+                            <div class="price-values">
+                                <div class="price_text_btn">
+                                    <span>Price:</span>
+                                    <input type="text" class="price-amount">
+                                </div>
+                                <button class="button" type="submit">Filter</button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="advertising">
@@ -220,6 +246,10 @@ if(isset($_POST['filter_btn'])){
     </div>
 </div>
 <!-- Shop page wraper end -->
+
+
+
+
 <?php
 include 'inc/footer.php'
 ?>
