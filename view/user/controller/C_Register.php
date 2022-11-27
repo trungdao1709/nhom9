@@ -19,7 +19,7 @@ if (isset($_POST["btn_register"])) {
     } else {
         createAccount($email, $name, $pass);
         // header('Location: login.php');
-        $yourURL="http://localhost/nhom9ne-master/view/user/login.php";
+        $yourURL="http://localhost/tesst/view/user/login.php";
             echo ("<script>location.href='$yourURL'</script>");
 
 

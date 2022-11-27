@@ -21,18 +21,9 @@ include "model/config.php";
                 <div class="row d-flex flex-wrap">
                     <div class="col-4">
                         <div class="form-group mb-3">
-                            <label for="" class="form-label">Loại đặc biệt ?</label>
+                            <label for="" class="form-label">Ngày nhập</label>
                             <div class="form-control">
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="radio" id="special" class="form-check-input" name="special" value="1"> Đặc biệt
-                                    </label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="radio" id="special" class="form-check-input" name="special" value="0" checked> Bình thường
-                                    </label>
-                                </div>
+                                <input type="date" name="ngay_nhap">
                             </div>
                         </div>
                     </div>

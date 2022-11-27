@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+    session_start();
     // session_destroy();
     include "inc/header.php";   
     // var_dump($_SESSION['cart']);
