@@ -1,39 +1,46 @@
 <?php
 include 'inc/header.php';
 include "model/config.php";
-function getCategory(){
+function getCategory()
+{
     $sql = 'SELECT * FROM loai_hang';
     return getAll($sql);
 }
-function findCategory($id){
+function findCategory($id)
+{
     $sql = "SELECT * FROM hang WHERE id_loai_hang  ='$id'";
     return getAll($sql);
 }
 $allCate = getCategory();
-if(isset($_POST["search"])){
-    $search=$_POST["input_search"];
-    $querySearch="select * from hang where ten_hang like '%$search%'";
-    $hang= getAll($querySearch);
-    
-} else{
+if (isset($_POST["search"])) {
+    $search = $_POST["input_search"];
+    $querySearch = "select * from hang where ten_hang like '%$search%'";
+    $hang = getAll($querySearch);
+} else {
     $query = "select * from hang";
-$hang = getAll($query);
+    $hang = getAll($query);
 }
-if(isset($_POST['filter_btn'])){
+if (isset($_POST['filter_btn'])) {
     $filter = $_POST['filter'];
-    if($filter == 'all'){
-        $querySearch="select * from hang where ten_hang like '%$search%'";
-        $hang= getAll($querySearch);
-    }else{
+    if ($filter == 'all') {
+        $querySearch = "select * from hang where ten_hang like '%$search%'";
+        $hang = getAll($querySearch);
+    } else {
         $hang = findCategory($filter);
     }
-
 }
+function hanghoa_top5()
+{
+    $sql = "SELECT * FROM `hang` WHERE 1 order by `id` desc limit 5";
+    return getAll($sql);
+}
+$dstop3 = hanghoa_top5();
+
 ?>
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
     <div class="breadcrumb_container ">
-        <div class="container">
+        <div class="container" >
             <nav data-depth="3" class="breadcrumb">
                 <ol>
                     <li><a href="#"><span>Home</span></a></li>
@@ -73,11 +80,10 @@ if(isset($_POST['filter_btn'])){
                                 <div class="orderby-wrapper">
                                     <label>Phân loại :</label>
                                     <select class="nice-select-menu orderby" name='filter' type='submit'>
-                                        <option dara-display="Select" value ='all'>Tất cả</option>
-                                        <?php foreach($allCate as $value):?>
-                                            <option value="<?php echo $value['id']?>"><?php echo $value['ten_loai_hang']?></option>
-                                        <?php endforeach?>
-                                        
+                                        <option dara-display="Select" value='all'>Tất cả</option>
+                                        <?php foreach ($allCate as $value) : ?>
+                                            <option value="<?php echo $value['id'] ?>"><?php echo $value['ten_loai_hang'] ?></option>
+                                        <?php endforeach ?>
                                     </select>
                                 </div>
                                 <button name='filter_btn' class='bg-white d-flex align-items-center'><i class="fa fa-search"></i></button>
@@ -88,39 +94,42 @@ if(isset($_POST['filter_btn'])){
                         <div id="grid" class="tab-pane fade show active">
                             <div class="row">
                                 <!-- single product -->
-                               <?php foreach ( $hang as $key => $value) : ?>
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>"  alt="harosa product">
-                                            </a>
-                                            <div class="quick-view">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
+                                <?php foreach ($hang as $key => $value) : ?>
+                                    <div class="col-sm-6 col-md-6 col-lg-4">
+                                        <div class="product-miniature js-product-miniature">
+                                            <div class="img_block">
+                                                <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
+                                                    <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>" alt="harosa product">
+                                                </a>
+                                                <ul class="product-flag">
+                                                    <li class="new"><span>New</span></li>
+                                                </ul>
+                                                <div class="quick-view">
+                                                    <a href="shop_detail.php?id=<?php echo $value["id"] ?>" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
+                                                </div>
+                                                <div class="product-price-and-shipping_top">
+                                                    <span class="discount-percentage discount-product">-8%</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="product_desc">
-                                            <h1> <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"]?></a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price price-sale">$<?php echo $value["gia"]?></span>
-                                            </div>
-                                            <div class="cart">
-                                                <div class="product-add-to-cart">
-                                                    <a href="cart.php">Add to cart</a>
+                                            <div class="product_desc">
+                                                <h1> <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="product_name" title="Hummingbird printed t-shirt"><?php echo $value["ten_hang"] ?></a></h1>
+                                                <div class="product-price-and-shipping">
+                                                    <span class="price price-sale">$<?php echo $value["gia"] ?></span>
+                                                </div>
+                                                <div class="cart">
+                                                    <div class="product-add-to-cart">
+                                                        <a href="cart.php">Add to cart</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 <?php endforeach ?>
                                 <!-- single product end -->
                             </div>
                         </div>
                         <div id="list" class="tab-pane fade">
                             <div class="row">
-                               
-                                
-                               
                             </div>
                         </div>
                     </div>
@@ -141,7 +150,7 @@ if(isset($_POST['filter_btn'])){
                         <h3>Arts & Crafts</h3>
                     </div>
                     <div class="product-filter mb-30">
-                    
+
                     </div>
 
                     <div class="advertising">
@@ -157,59 +166,26 @@ if(isset($_POST['filter_btn'])){
                             <div class="feature-item owl-carousel">
                                 <div class="item-product">
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/1.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
+                                    <?php foreach ($dstop3 as $value) : ?>
+                                        <div class="product-miniature js-product-miniature">
+                                            <div class="img_block">
+                                                <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
+                                                    <img src="assets/images/product/<?php echo $value["hinh_anh"] ?>" alt="">
+                                                </a>
                                             </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
+                                            <div class="product_desc">
+                                                <div class="manufacturer">
+                                                    <a href="#">Graphic Corner</a>
+                                                </div>
+                                                <h1><a href="shop_detail.php?id=<?php echo $value["id"] ?>"><?php echo $value["mo_ta"] ?></a></h1>
+                                                <div class="product-price-and-shipping">
+                                                    <span class="price ">$<?php echo $value["gia"] ?></span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    <?php endforeach ?>
                                     <!-- mini product end -->
-                                    <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/2.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- mini product end -->
-                                    <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/3.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- mini product end -->
+
                                 </div>
                             </div>
                         </div>

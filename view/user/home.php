@@ -186,8 +186,14 @@ $hang = getAll($query);
                                     <a href="shop_detail.php?id=<?php echo $value["id"] ?>" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/<?php echo $value["hinh_anh"] ?>" alt="harosa product">
                                     </a>
+                                    <ul class="product-flag">
+                                        <li class="new"><span>New</span></li>
+                                    </ul>
                                     <div class="quick-view">
-                                        <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
+                                        <a href="shop_detail.php?id=<?php echo $value["id"] ?>" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
+                                    </div>
+                                    <div class="product-price-and-shipping_top">
+                                        <span class="discount-percentage discount-product">-8%</span>
                                     </div>
                                 </div>
                                 <div class="product_desc">
@@ -198,7 +204,7 @@ $hang = getAll($query);
                                     </div>
                                     <div class="cart">
                                         <div class="product-add-to-cart">
-                                            <a href="cart.html">Add to cart</a>
+                                            <a href="cart.php">Add to cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -272,7 +278,7 @@ $hang = getAll($query);
                                         </div>
                                         <div class="cart">
                                             <div class="product-add-to-cart">
-                                                <a href="cart.html">Add to cart</a>
+                                                <a href="cart.php">Add to cart</a>
                                             </div>
                                         </div>
                                     </div>
