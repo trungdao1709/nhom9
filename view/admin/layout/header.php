@@ -25,6 +25,8 @@
     }else{
         header('Location: home.php');
     }
+ 
+    
 ?>
   <body>
     <div class="be-wrapper be-fixed-sidebar">
@@ -40,7 +42,7 @@
                   <div class="user-info">
                     <div class="user-name">Túpac Amaru</div>
                     <div class="user-position online">Available</div>
-                  </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Account</a><a class="dropdown-item" href="#"><span class="icon mdi mdi-settings"></span>Settings</a><a class="dropdown-item" href="pages-login.html"><span class="icon mdi mdi-power"></span>Logout</a>
+                  </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Account</a><a class="dropdown-item" href="#"><span class="icon mdi mdi-settings"></span>Settings</a><a class="dropdown-item" href="../user/controller/C_logout.php"><span class="icon mdi mdi-power"></span>Logout</a>
                 </div>
               </li>
             </ul>
