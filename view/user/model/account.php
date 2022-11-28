@@ -7,9 +7,6 @@ if(!empty($_SESSION)){
         $sql = "SELECT * FROM user WHERE id = '$id'";
         return GetOne($sql);
     }
-    $err ='';
     $currentAcc = getOneInfor($idUser);
 ?>
 
-
-           

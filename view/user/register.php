@@ -1,5 +1,7 @@
 
-<?php include 'inc/header.php';
+<?php   
+
+ include 'inc/header.php';
 include "controller/C_Register.php" ?>
 
 <!-- top breadcrumb -->

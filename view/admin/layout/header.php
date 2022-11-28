@@ -16,6 +16,16 @@
     <link rel="stylesheet" type="text/css" href="assets\lib\datetimepicker\css\bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="assets\css\app.css" type="text/css">
   </head>
+  <?php 
+    session_start();
+    if(isset($_SESSION['user'])){
+        if($_SESSION['user']['vai_tro'] != 'admin'){
+            header('Location: home.php');
+        }
+    }else{
+        header('Location: home.php');
+    }
+?>
   <body>
     <div class="be-wrapper be-fixed-sidebar">
       <nav class="navbar navbar-expand fixed-top be-top-header">

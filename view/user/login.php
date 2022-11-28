@@ -1,7 +1,6 @@
 
 <?php 
-session_start();    
-include '../user/controller/C_logout.php';
+ include 'controller/C_login.php';
 include 'inc/header.php';
 ?>
 

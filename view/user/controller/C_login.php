@@ -1,12 +1,12 @@
 
 <?php
+session_start();
 
-// session_start();
-// if (!empty($_SESSION)) {
-//     if ($_SESSION['user']) {
-//         header('Location: home.php');
-//     }
-// }
+if (!empty($_SESSION)) {
+    if ($_SESSION['user']) {
+        header('Location: home.php');
+    }
+}
 include './model/config.php';
 include './model/login.php';
 $err = '';

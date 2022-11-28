@@ -336,7 +336,74 @@ $hang = getAll($query);
                 </div>
             </div>
         </div>
-       
-        <?php
-                include 'inc/footer.php';
+        <!-- home banner end -->
+        <!-- footer start -->
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="ft_newsletter">
+                            <div id="block-newsletter-label">
+                                <div class="title-newsletter">
+                                    <h2>Newsletter sign up</h2>
+                                    <p class="desc">(Get 30% OFF coupon today subscibers)</p>
+                                </div>
+                            </div>
+                            <form action="#">
+                                <input class="btn btn-primary float-xs-right hidden-xs-down" name="submitNewsletter" value="Subscribe" type="submit">
+                                <div class="input-wrapper">
+                                    <input name="email" value="" placeholder="Your email address" aria-labelledby="block-newsletter-label" type="text">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="pos_logo product_block_container">
+                            <div class="logo-slider owl-carousel pos_content">
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/1.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/2.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/3.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/4.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/5.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/6.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/1.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                                <div class="item-banklogo">
+                                    <a href="#">
+                                        <img src="assets/images/brand/2.webp" alt="harosa brand logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                include 'inc/footer.php'
                 ?>
+            </div>
+        </footer>

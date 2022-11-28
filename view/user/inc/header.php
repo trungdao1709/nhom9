@@ -1,4 +1,6 @@
-
+<?php 
+ session_start();
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -79,7 +81,7 @@
                         </div>
                         <div class="topbar-nav">
                             <!-- my account -->
-                            
+
                             <div class="dropdown menu-my-account-container">
                                 <button data-bs-toggle="dropdown">
                                     <i class="first-icon fa fa-user-circle"></i> My Account <i class="ion-ios-arrow-down"></i>
@@ -87,11 +89,20 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="../user/my_account.php">My Account</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="../login.php">Sign in</a></li>
-                                    <li><a href="../controller/C_logout.php">Sign Out</a></li>
-                                    </li>
-                                    
+                                    <li><a href="login.php">Sign in</a></li>
+                                    <li><a href="../user/controller/C_logout.php">Sign Out</a></li>
+                                    <?php if ($_SESSION['user']['vai_tro'] == "admin") { ?>
+
+                                        <li><a class="dropdown-item" href="../admin/admin.php">
+                                                
+                                                Admin
+                                            </a></li>
+
+                                    <?php } ?>
+
+
                                 </ul>
+
                             </div>
                         </div>
                     </div>
