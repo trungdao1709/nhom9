@@ -37,6 +37,7 @@ function hanghoa_top5()
 $dstop3 = hanghoa_top5();
 
 ?>
+
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
     <div class="breadcrumb_container ">
@@ -49,16 +50,11 @@ $dstop3 = hanghoa_top5();
                     <li><a href="#"><span>Shop</span></a></li>
                 </ol>
             </nav>
-            <div class="woocommerce-ordering">
-                <form method="POST" action="./shop.php">
-                    <input class="text_input" value="" name="input_search" placeholder="Search" type="text">
-                    <button type="submit" name="search"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
         </div>
     </div>
 </div>
 <!-- top breadcrumb end -->
+
 <!-- Shop page wraper -->
 <div class="shop-page-wraper">
     <div class="container">
@@ -76,7 +72,7 @@ $dstop3 = hanghoa_top5();
                             </ul>
                         </div>
                         <div class="woocommerce-ordering">
-                            <form method="post" class="woocommerce-ordering hidden-xs d-flex ">
+                            <form method="get" class="woocommerce-ordering hidden-xs">
                                 <div class="orderby-wrapper">
                                     <label>Phân loại :</label>
                                     <select class="nice-select-menu orderby" name='filter' type='submit'>
@@ -86,7 +82,6 @@ $dstop3 = hanghoa_top5();
                                         <?php endforeach ?>
                                     </select>
                                 </div>
-                                <button name='filter_btn' class='bg-white d-flex align-items-center'><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>
@@ -187,7 +182,6 @@ $dstop3 = hanghoa_top5();
                         <h3>Arts & Crafts</h3>
                     </div>
                     <div class="product-filter mb-30">
-
                     </div>
 
                     <div class="advertising">
@@ -233,6 +227,10 @@ $dstop3 = hanghoa_top5();
     </div>
 </div>
 <!-- Shop page wraper end -->
+
+
+
+
 <?php
 include 'inc/footer.php'
 ?>
