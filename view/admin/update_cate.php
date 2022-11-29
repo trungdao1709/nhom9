@@ -2,10 +2,11 @@
 include "layout/header.php";
 include "model/config.php";
 $id= $_GET['id'];
-$query = "select * from loai_hang where id = $id";
+$query = "SELECT * from loai_hang where id = $id";
 $loai_hang = getOne($query);
 
 ?>
+
 </div>
 </div>
 <div class="be-content">
@@ -21,11 +22,11 @@ $loai_hang = getOne($query);
     </div>
     <div class="main-content container-fluid">
         <div>
-        <form method="post" id="form_1" action="./controller/cate/save_addcate.php">
+        <form method="post" id="form_1" action="./controller/cate/update.php">
     <div class="d-flex justify-content-center">
         <div class="col-6">
         <div class="form1">
-                    <input type="text" name="CateId" value="<?php echo $Loai_hang["id"] ?>" hidden>
+                    <input type="text" name="id" value="<?php echo $Loai_hang["id"] ?>" hidden>
                 </div>
             <div class="form-group mb-3">
                 <label for="name_cate" class="form-label">Tên danh mục</label>

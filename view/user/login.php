@@ -1,7 +1,7 @@
 
 <?php 
  include 'controller/C_login.php';
-include 'inc/header.php';
+    include 'inc/header.php';
 ?>
 
 <!-- top breadcrumb -->
@@ -50,16 +50,15 @@ include 'inc/header.php';
                             <h3 class="mb-10 custom-title">returnng customer</h3>
                             <p class="mb-10"><strong>I am a returning customer</strong></p>
                             <form action="login.php" method="post">
-                  
-                            <?php echo $err != "" ?  "
-            <div class='alert alert-danger' role='alert'>
-                Lỗi: $err
-            </div>
-        "
-        :
-        
-        ''
-        ?>
+                                <?php echo $err != "" ?  "
+                                        <div class='alert alert-danger' role='alert'>
+                                            Lỗi: $err
+                                        </div>
+                                    "
+                                    :
+                                    
+                                    ''
+                                ?>
                                 <div class="form-group">
                                     <label>Email</label>
                                     <input type="text" name="email" placeholder="Enter your email address..." id="input-email" class="form-control">

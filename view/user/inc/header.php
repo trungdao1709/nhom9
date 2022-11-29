@@ -1,5 +1,6 @@
-<?php 
- session_start();
+<?php  
+    session_start();
+    
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -90,19 +91,18 @@
                                     <li><a href="../user/my_account.php">My Account</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="login.php">Sign in</a></li>
-                                    <li><a href="../user/controller/C_logout.php">Sign Out</a></li>
-                                    <?php if ($_SESSION['user']['vai_tro'] == "admin") { ?>
-
-                                        <li><a class="dropdown-item" href="../admin/admin.php">
-                                                
-                                                Admin
-                                            </a></li>
-
+                                    <?php if (isset($_SESSION['user'])){ ?>
+                                        <li><a href="../user/controller/C_logout.php">Sign Out</a></li>
                                     <?php } ?>
-
+                                    <?php if (isset($_SESSION['user'])){
+                                        if($_SESSION['user']['vai_tro'] == "admin"){
+                                     ?>
+                                        <li><a class="dropdown-item" href="../admin/admin.php">
+                                            Admin
+                                        </a></li>
+                                    <?php } }?>
 
                                 </ul>
-
                             </div>
                         </div>
                     </div>

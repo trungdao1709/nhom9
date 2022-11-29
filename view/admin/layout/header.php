@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="assets\css\app.css" type="text/css">
   </head>
   <?php 
-    session_start();
-    if(isset($_SESSION['user'])){
-        if($_SESSION['user']['vai_tro'] != 'admin'){
-            header('Location: home.php');
-        }
-    }else{
-        header('Location: home.php');
-    }
+    // session_start();
+    // if(isset($_SESSION['user'])){
+    //     if($_SESSION['user']['vai_tro'] != 'admin'){
+    //         header('Location: home.php');
+    //     }
+    // }else{
+    //     header('Location: home.php');
+    // }
  
     
 ?>

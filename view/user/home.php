@@ -3,8 +3,8 @@ include 'inc/header.php';
 include './model/config.php';
 $query = "select * from hang";
 $hang = getAll($query);
-?>
 
+?>
 
 
 <div class="offcanvas offcanvas-start" id="offcanvasMenu">
