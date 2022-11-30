@@ -43,7 +43,7 @@ $hang = getAll($query);
                                 <tr class="odd gradeX">
                                     <td><?php echo $value["ten_hang"]?></td>
                                     <td>
-                                        <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>" alt="">
+                                        <img style="width: 50px;" src="assets/images/product/<?php echo $value['hinh_anh'] ?>" alt="">
                                     </td>
                                     <td><?php echo $value["gia"]?></td>
                                     <td class="center"><?php echo $value["ngay_nhap"]?></td>

@@ -1,7 +1,7 @@
 <?php
 include "layout/header.php";
 include "model/config.php";
-$query = "select * from loai_hang";
+$query = "SELECT * FROM loai_hang";
 $loai_hang = getAll($query);
 ?>
 </div>

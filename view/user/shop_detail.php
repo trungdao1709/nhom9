@@ -160,7 +160,7 @@ $hang = getOne($query);
                         </form>
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
     </div>
 </div>

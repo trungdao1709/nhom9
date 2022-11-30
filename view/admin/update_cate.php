@@ -26,7 +26,7 @@ $loai_hang = getOne($query);
     <div class="d-flex justify-content-center">
         <div class="col-6">
         <div class="form1">
-                    <input type="text" name="id" value="<?php echo $Loai_hang["id"] ?>" hidden>
+                    <input type="text" name="id" value="<?php echo $loai_hang["id"] ?>" hidden>
                 </div>
             <div class="form-group mb-3">
                 <label for="name_cate" class="form-label">Tên danh mục</label>
