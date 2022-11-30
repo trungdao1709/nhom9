@@ -13,7 +13,7 @@ include "model/account.php";
       <img src="./assets/images/logo/logo-whit.webp" alt="">
         </div>
     </div>
-    <form action='' method='post' enctype='multipart/form-data'>
+    <form action='./controller/save_update_user.php' method='post' enctype='multipart/form-data'>
     <input type="type" hidden id="id">
         <div class='row'>
             <div class="mb-3 col">
@@ -35,7 +35,7 @@ include "model/account.php";
             </div>
 
             
-            <button type="submit" name='btn_submit' class="btn btn-primary">Lưu</button>
+            <!-- <button type="submit" name='btn_submit' class="btn btn-primary">Lưu</button> -->
         </div>
     </form>
     <?php

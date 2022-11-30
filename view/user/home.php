@@ -338,7 +338,7 @@ $hang = getAll($query);
         </div>
         <!-- home banner end -->
         <!-- footer start -->
-        <footer id="footer">
+        <!-- <footer id="footer">
             <div class="footer-container">
                 <div class="footer-top">
                     <div class="container">
@@ -402,8 +402,9 @@ $hang = getAll($query);
                         </div>
                     </div>
                 </div>
-                <?php
-                include 'inc/footer.php'
-                ?>
+              
             </div>
-        </footer>
+        </footer>  -->
+         <?php
+                include 'inc/footer.php';
+                ?>
