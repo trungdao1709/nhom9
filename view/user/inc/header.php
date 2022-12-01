@@ -89,7 +89,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="../user/my_account.php">My Account</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="../user/checkout.php">Checkout</a></li>
                                     <li><a href="login.php">Sign in</a></li>
                                     <?php if (isset($_SESSION['user'])){ ?>
                                         <li><a href="../user/controller/C_logout.php">Sign Out</a></li>

@@ -89,6 +89,7 @@ $dstop3 = hanghoa_top5();
                         <div id="grid" class="tab-pane fade show active">
                             <div class="row">
                                 <!-- single product -->
+
                                 <?php foreach ($hang as $key => $value) : ?>
                                     <form action="../user/controller/cart/add_cart.php" method="POST">
                                         <div class="col-sm-6 col-md-6 col-lg-4">

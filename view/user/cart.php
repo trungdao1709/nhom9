@@ -1,16 +1,15 @@
 <?php
-    
-    // session_destroy();
-    include "inc/header.php";   
+
+// session_destroy();
+include "inc/header.php";
+// var_dump($_SESSION['cart']);
+if (isset($_SESSION['cart'])) {
+    $cart = $_SESSION['cart'];
+    // print_r($cart) ;
     // var_dump($_SESSION['cart']);
-    if(isset($_SESSION['cart'])){
-        $cart = $_SESSION['cart'];
-        // print_r($cart) ;
-        // var_dump($_SESSION['cart']);
-    }
-    else {
-        echo 'chuwa co gio hang';
-    }
+} else {
+    echo 'chuwa co gio hang';
+}
 ?>
 
 <!-- top breadcrumb -->
@@ -55,30 +54,30 @@
                         </tr>
                     </thead>
                     <tbody>
-                       <?php 
-                        $tong=0;
-                       foreach($cart as $value => $items){
-                        $tt=$items['gia'] * $items['so_luong'];
-                        $tong+=$tt;
-                        $xoasp='<a onclick="return confirm("Bạn có chắc muốn xóa ??")" href="./controller/cart/delete_cart.php?id='.$items['id'].'">
-                        <button>Xoa</button></a>';
-                        echo'
-                            <tr>
-                                <td class="product-thumbnail">
-                                    <a href="#"><img src="assets/images/product/'.$items['image'].'" alt="cart-image"></a>
-                                </td>
-                                <td class="product-name"><a href="#">'.$items['name'].'</a></td>
-                                <td class="product-price"><span class="amount">'.$items['gia'].'</span></td>
-                                <td class="product-quantity"><input type="number" value="'.$items['so_luong'].'"></td>
-                                <td class="product-subtotal">$'.$tt.'</td>
-                                <td class="product-remove">
-                                    <a onclick="return confirm("Bạn có chắc muốn xóa ??")" href="controller/cart/delete_cart.php?id='.$value.'">
-                                        Xoa
-                                    </a>
-                                </td>
-                            </tr>'
-                        ;
-                       }
+                        <?php
+                            $tong = 0;
+                            foreach ($cart as $value => $items) {
+                                $tt = $items['gia'] * $items['so_luong'];
+                                $tong += $tt;
+                                $xoasp = '<a onclick="return confirm("Bạn có chắc muốn xóa ??")" href="./controller/cart/delete_cart.php?id=' . $items['id'] . '">
+                                         <button>Xoa</button></a>';
+                                echo '
+                                <tr>
+                                    <td class="product-thumbnail">
+                                        <a href="#"><img src="assets/images/product/' . $items['image'] . '" alt="cart-image"></a>
+                                    </td>
+                                    <td class="product-name"><a href="#">' . $items['name'] . '</a></td>
+                                    <td class="product-price"><span class="amount">' . $items['gia'] . '</span></td>
+                                    <td class="product-quantity"><input type="number" value="' . $items['so_luong'] . '"></td>
+                                    <td class="product-subtotal">$' . $tt . '</td>
+                                    <td class="product-remove">
+                                        <a onclick="return confirm("Bạn có chắc muốn xóa ??")" href="controller/cart/delete_cart.php?id=' . $value . '">
+                                            Xoa
+                                        </a>
+                                    </td>
+                                </tr>';
+                            }
+                            
                         ?>
                     </tbody>
                 </table>
@@ -88,7 +87,7 @@
                 <!-- Cart Button Start -->
                 <div class="col-md-8 col-sm-7">
                     <div class="buttons-cart">
-                    <input type="submit" value="Update Cart">
+                        <input type="submit" value="Update Cart">
                         <a href="shop.php">Continue Shopping</a>
                     </div>
                 </div>
@@ -102,12 +101,12 @@
                             <tbody>
                                 <tr class="cart-subtotal">
                                     <th>Subtotal</th>
-                                    <td><span class="amount">$<?php echo $tong?></span></td>
+                                    <td><span class="amount">$<?php echo $tong ?></span></td>
                                 </tr>
                                 <tr class="order-total">
                                     <th>Total</th>
                                     <td>
-                                        <strong><span class="amount">$<?php echo $tong?></span></strong>
+                                        <strong><span class="amount">$<?php echo $tong ?></span></strong>
                                     </td>
                                 </tr>
                             </tbody>
