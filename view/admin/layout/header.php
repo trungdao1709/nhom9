@@ -130,7 +130,7 @@
                       </li>
                       <li><a href="user.php">Người dùng</a>
                       </li>
-                      <li><a href="hoa_don.php">Hóa đơn</a>
+                      <!-- <li><a href="hoa_don.php">Hóa đơn</a> -->
                       </li>
                     </ul>
                   </li>

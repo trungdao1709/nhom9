@@ -46,6 +46,8 @@ $user = getAll($query);
                                         <td><?php echo $value["vai_tro"] ?></td>
                                         <td class="center">
                                             <a href="sua_user.php?id=<?php echo $value["id"] ?>"><button class="update">Update</button></a>
+                                          
+                                          
                                             <a onclick="return confirm('Bạn có chắc muốn xóa ??')" href="./controller/user/save_deleuser.php?id=<?php echo $value["id"] ?>"><button class="delete">Delete</button></a>
                                         </td>
 

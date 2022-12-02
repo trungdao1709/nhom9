@@ -41,7 +41,7 @@ $dstop3 = hanghoa_top5();
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
     <div class="breadcrumb_container ">
-        <div class="container">
+        <div class="container" style="justify-content:  space-between; display: flex;">
             <nav data-depth="3" class="breadcrumb">
                 <ol>
                     <li><a href="#"><span>Home</span></a></li>
@@ -50,6 +50,13 @@ $dstop3 = hanghoa_top5();
                     <li><a href="#"><span>Shop</span></a></li>
                 </ol>
             </nav>
+            <div class="woocommerce-ordering">
+                <form method="POST" action="./shop.php" style="display: flex;">
+                    <input class="text_input" value="" name="input_search" placeholder="Search" type="text">
+                    <button type="submit" name="search"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
@@ -72,7 +79,7 @@ $dstop3 = hanghoa_top5();
                             </ul>
                         </div>
                         <div class="woocommerce-ordering">
-                            <form method="get" class="woocommerce-ordering hidden-xs">
+                            <form method="post" class="woocommerce-ordering hidden-xs d-flex ">
                                 <div class="orderby-wrapper">
                                     <label>Phân loại :</label>
                                     <select class="nice-select-menu orderby" name='filter' type='submit'>
@@ -82,6 +89,7 @@ $dstop3 = hanghoa_top5();
                                         <?php endforeach ?>
                                     </select>
                                 </div>
+                                <button name='filter_btn' class='bg-white d-flex align-items-center'><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>
@@ -91,9 +99,10 @@ $dstop3 = hanghoa_top5();
                                 <!-- single product -->
 
                                 <?php foreach ($hang as $key => $value) : ?>
-                                    <form action="../user/controller/cart/add_cart.php" method="POST">
-                                        <div class="col-sm-6 col-md-6 col-lg-4">
-                                            <div class="product-miniature js-product-miniature">
+
+                                    <div class="col-sm-6 col-md-6 col-lg-4">
+                                        <div class="product-miniature js-product-miniature">
+                                            <form action="../user/controller/cart/add_cart.php" method="POST">
                                                 <div class="img_block">
                                                     <input type="hidden" name="id" value="<?php echo $value["id"] ?>">
                                                     <input type="hidden" name="image" value="<?php echo $value["hinh_anh"] ?>">
@@ -117,9 +126,10 @@ $dstop3 = hanghoa_top5();
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
-                                    </form>
+                                    </div>
+
                                 <?php endforeach ?>
                                 <!-- single product end -->
                             </div>

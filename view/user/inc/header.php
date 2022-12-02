@@ -1,6 +1,5 @@
-<?php  
-    session_start();
-    
+<?php
+session_start();
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -43,7 +42,7 @@
     <link rel="stylesheet" href="assets/css/colors.css">
 
 </head>
-
+<!--  -->
 <body>
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -91,16 +90,17 @@
                                     <li><a href="../user/my_account.php">My Account</a></li>
                                     <li><a href="../user/checkout.php">Checkout</a></li>
                                     <li><a href="login.php">Sign in</a></li>
-                                    <?php if (isset($_SESSION['user'])){ ?>
+                                    <?php if (isset($_SESSION['user'])) { ?>
                                         <li><a href="../user/controller/C_logout.php">Sign Out</a></li>
                                     <?php } ?>
-                                    <?php if (isset($_SESSION['user'])){
-                                        if($_SESSION['user']['vai_tro'] == "admin"){
-                                     ?>
-                                        <li><a class="dropdown-item" href="../admin/admin.php">
-                                            Admin
-                                        </a></li>
-                                    <?php } }?>
+                                    <?php if (isset($_SESSION['user'])) {
+                                        if ($_SESSION['user']['vai_tro'] == "admin") {
+                                    ?>
+                                            <li><a class="dropdown-item" href="../admin/admin.php">
+                                                    Admin
+                                                </a></li>
+                                    <?php }
+                                    } ?>
 
                                 </ul>
                             </div>
@@ -124,8 +124,15 @@
                             <nav>
                                 <ul>
                                     <li class="current"><a href="home.php">Home <i class="fa fa-angle-down"></i></a>
+
                                     </li>
-                                    <li><a href="shop.php">Shop</a></li>
+                                    <li><a href="shop.php">Shop</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">
+                                               
+                                            </a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="blog.php">Blog</a></li>
                                     <li><a href="about-us.php">About Us</a></li>
                                     <li><a href="contact-us.php">Contact</a></li>
@@ -152,7 +159,7 @@
                             <div class="dropdown">
                                 <button class="cart-icon" data-bs-toggle="dropdown">
                                     <i class="fa fa-shopping-basket"></i>
-                                    <a href="cart.php"><span class="item_txt"> Cart</span> </a>
+                                    <a href="../cart.php"><span class="item_txt"> Cart</span> </a>
                                 </button>
                                 <div class="header-cart dropdown-menu">
                                     <ul>
