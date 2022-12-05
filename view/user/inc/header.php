@@ -123,9 +123,9 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul>
-                                    <li class="current"><a href="home.php">Home <i class="fa fa-angle-down"></i></a>
+                                    <li class="current"><a href="home.php">Trang chủ <i class="fa fa-angle-down"></i></a>
                                     </li>
-                                    <li><a href="shop.php">Shop</a></li>
+                                    <li><a href="shop.php">Cửa hàng</a></li>
                                     <li><a href="blog.php">Blog</a></li>
                                     <li><a href="about-us.php">About Us</a></li>
                                     <li><a href="contact-us.php">Contact</a></li>

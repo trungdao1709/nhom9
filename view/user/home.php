@@ -16,7 +16,7 @@ $hang = getAll($query);
 
         <div class="contact-link">
             <div class="info_box phone">
-                Call us : <span>(012) 800 456 789</span>
+                Gọi cho chúng tôi : <span>(012) 800 456 789</span>
             </div>
             <div class="info_box email">
                 email : <a href="mailto:demo@example.com">demo@example.com</a>
