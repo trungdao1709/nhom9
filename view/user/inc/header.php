@@ -1,6 +1,5 @@
-<?php  
-    session_start();
-    
+<?php
+session_start();
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -43,7 +42,7 @@
     <link rel="stylesheet" href="assets/css/colors.css">
 
 </head>
-
+<!--  -->
 <body>
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -64,7 +63,7 @@
                         <div class="top-bar-left">
                             <div class="contact-link">
                                 <div class="info_box phone">
-                                    Call us : <span>(012) 800 456 789</span>
+                                    Gọi cho chúng tôi : <span>(012) 800 456 789</span>
                                 </div>
                                 <div class="info_box email">
                                     email : <a href="mailto:demo@example.com">demo@example.com</a>
@@ -85,22 +84,23 @@
 
                             <div class="dropdown menu-my-account-container">
                                 <button data-bs-toggle="dropdown">
-                                    <i class="first-icon fa fa-user-circle"></i> My Account <i class="ion-ios-arrow-down"></i>
+                                    <i class="first-icon fa fa-user-circle"></i> Tài khoản của tôi <i class="ion-ios-arrow-down"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="../user/my_account.php">My Account</a></li>
-                                    <li><a href="../user/checkout.php">Checkout</a></li>
-                                    <li><a href="login.php">Sign in</a></li>
-                                    <?php if (isset($_SESSION['user'])){ ?>
-                                        <li><a href="../user/controller/C_logout.php">Sign Out</a></li>
+                                    <li><a href="../user/my_account.php">Tài khoản của tôi</a></li>
+                                    <li><a href="../user/checkout.php">Thủ tục thanh toán</a></li>
+                                    <li><a href="login.php">Đăng nhập</a></li>
+                                    <?php if (isset($_SESSION['user'])) { ?>
+                                        <li><a href="../user/controller/C_logout.php">Đăng xuất</a></li>
                                     <?php } ?>
-                                    <?php if (isset($_SESSION['user'])){
-                                        if($_SESSION['user']['vai_tro'] == "admin"){
-                                     ?>
-                                        <li><a class="dropdown-item" href="../admin/admin.php">
-                                            Admin
-                                        </a></li>
-                                    <?php } }?>
+                                    <?php if (isset($_SESSION['user'])) {
+                                        if ($_SESSION['user']['vai_tro'] == "admin") {
+                                    ?>
+                                            <li><a class="dropdown-item" href="../admin/admin.php">
+                                                    Admin
+                                                </a></li>
+                                    <?php }
+                                    } ?>
 
                                 </ul>
                             </div>
@@ -127,8 +127,8 @@
                                     </li>
                                     <li><a href="shop.php">Cửa hàng</a></li>
                                     <li><a href="blog.php">Blog</a></li>
-                                    <li><a href="about-us.php">About Us</a></li>
-                                    <li><a href="contact-us.php">Contact</a></li>
+                                    <li><a href="about-us.php">Về chúng tôi</a></li>
+                                    <li><a href="contact-us.php">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -152,7 +152,7 @@
                             <div class="dropdown">
                                 <button class="cart-icon" data-bs-toggle="dropdown">
                                     <i class="fa fa-shopping-basket"></i>
-                                    <a href="cart.php"><span class="item_txt"> Cart</span> </a>
+                                    <a href="../cart.php"><span class="item_txt"> Giỏ hàng</span> </a>
                                 </button>
                                 <div class="header-cart dropdown-menu">
                                     <ul>
@@ -162,12 +162,12 @@
                                                 <span class="product-quantity">1x</span>
                                             </div>
                                             <div class="right_block">
-                                                <span class="product-name">Hummingbird printed t-shirt</span>
+                                                <span class="product-name">Dưỡng ẩm mềm mịn cho làn da</span>
                                                 <span class="product-price">$21.99</span>
                                                 <a href="#" class="remove-from-cart"> <i class="fa fa-remove pull-xs-left"></i></a>
                                                 <div class="attributes_content">
                                                     <span><strong>Size</strong>: S</span><br>
-                                                    <span><strong>Color</strong>: White</span><br>
+                                                    <span><strong>Màu sắc</strong>: Trắng</span><br>
                                                 </div>
                                             </div>
                                         </li>
@@ -177,11 +177,11 @@
                                                 <span class="product-quantity">1x</span>
                                             </div>
                                             <div class="right_block">
-                                                <span class="product-name">The adventure begins Framed poster</span>
+                                                <span class="product-name">Kem dưỡng da rắng hồng mềm mại</span>
                                                 <span class="product-price">$29.00</span>
                                                 <a href="#" class="remove-from-cart"><i class="fa fa-remove pull-xs-left"></i></a>
                                                 <div class="attributes_content">
-                                                    <span><strong>Dimension</strong>: 40x60cm</span><br>
+                                                    <span><strong>Kích thước</strong>: 40x60cm</span><br>
                                                 </div>
                                             </div>
                                         </li>
@@ -189,7 +189,7 @@
                                     <div class="price_content">
                                         <div class="cart-subtotals">
                                             <div class="products price_inline">
-                                                <span class="label">Subtotal</span>
+                                                <span class="label">tổng phụl</span>
                                                 <span class="value">$50.99</span>
                                             </div>
                                             <div class=" price_inline">
@@ -197,21 +197,21 @@
                                                 <span class="value"></span>
                                             </div>
                                             <div class="shipping price_inline">
-                                                <span class="label">Shipping</span>
+                                                <span class="label">Đang chuyển hàng</span>
                                                 <span class="value">$7.00</span>
                                             </div>
                                             <div class="tax price_inline">
-                                                <span class="label">Taxes</span>
+                                                <span class="label">thuế</span>
                                                 <span class="value">$0.00</span>
                                             </div>
                                         </div>
                                         <div class="cart-total price_inline">
-                                            <span class="label">Total</span>
+                                            <span class="label">Tổng cộng</span>
                                             <span class="value">$57.99</span>
                                         </div>
                                     </div>
                                     <div class="checkout">
-                                        <a href="checkout.html" class="btn btn-primary">checkout</a>
+                                        <a href="checkout.html" class="btn btn-primary">Thủ tục thanh toán</a>
                                     </div>
                                 </div>
                             </div>

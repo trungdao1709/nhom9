@@ -6,8 +6,8 @@
                 <div class="ft_newsletter">
                     <div id="block-newsletter-label">
                         <div class="title-newsletter">
-                            <h2>Newsletter sign up</h2>
-                            <p class="desc">(Get 30% OFF coupon today subscibers)</p>
+                            <h2>Đăng kí bản tin</h2>
+                            <p class="desc">(Nhận phiếu giảm giá 30% cho người đăng ký hôm nay)</p>
                         </div>
                     </div>
                     <form action="#">
@@ -69,12 +69,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-lg-3 links footer_block">
-                        <h3>Contact Infor</h3>
+                        <h3>Thông tin liên hệ</h3>
                         <div class="footer-contact">
                             <p class="address add">123 Main Street, Anytown, CA 12345 - USA.</p>
                             <p class="phone add">(+1)866-550-3669</p>
                             <p class="email add"><a href="#">yourmail@domain.com</a></p>
-                            <p class="time add">Working time: 9.00 -21.00</p>
+                            <p class="time add">Thời gian làm việc: 9.00 -21.00</p>
                         </div>
                         <div class="social_follow">
                             <ul>
@@ -87,25 +87,25 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 links footer_block">
-                        <h3 class="hidden-sm-down">Products</h3>
+                        <h3 class="hidden-sm-down">Các sản phẩm</h3>
                         <ul class="footer_list">
-                            <li><a href="#">Prices drop</a></li>
-                            <li><a href="#">New products</a></li>
-                            <li><a href="#">Best sales</a></li>
-                            <li><a href="#">Stores</a></li>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">My account</a></li>
+                            <li><a href="#">Giảm giá</a></li>
+                            <li><a href="#">Sản phẩm mới</a></li>
+                            <li><a href="#">Hàng bán tốt nhất</a></li>
+                            <li><a href="#">Của hàng</a></li>
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Tài khoản của tôi</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-3 links footer_block">
-                        <h3 class="hidden-sm-down">Our company</h3>
+                        <h3 class="hidden-sm-down">Công ty của chúng tôi</h3>
                         <ul class="footer_list">
-                            <li><a href="#">Delivery</a></li>
-                            <li><a href="#">Legal Notice</a></li>
-                            <li><a href="#">Terms and conditions of use</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Secure payment</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Vận chuyển</a></li>
+                            <li><a href="#">Thông báo pháp lí</a></li>
+                            <li><a href="#">Điều khoản và điều kiện sử dụng </a></li>
+                            <li><a href="#">về chúng tôi</a></li>
+                            <li><a href="#">Thanh toán an toàn</a></li>
+                            <li><a href="#">Liên hệ chúng tôi</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-3 links footer_block">
@@ -158,7 +158,7 @@
             <div class="copyright-inner">
                 <div class="row justify-content-between row-cols-1 row-cols-md-2">
                     <div class="col">
-                        <p>&copy; 2021 <span> Harosa </span> Made with <i class="fa fa-heart"></i> by <a href="https://hasthemes.com/">HasThemes</a></p>
+                        <p>&copy; 2021 <span> Harosa </span> Made with <i class="fa fa-heart"></i> bởi <a href="https://hasthemes.com/">NHóm 9</a></p>
                     </div>
                     <div class="col text-md-end">
                         <img src="assets/images/icons/payment-icon.webp" alt="payment icon">

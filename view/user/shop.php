@@ -41,15 +41,22 @@ $dstop3 = hanghoa_top5();
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
     <div class="breadcrumb_container ">
-        <div class="container">
+        <div class="container" style="justify-content:  space-between; display: flex;">
             <nav data-depth="3" class="breadcrumb">
                 <ol>
-                    <li><a href="#"><span>Home</span></a></li>
-                    <li><a href="#"><span>Fashion </span></a>
+                    <li><a href="#"><span>Nhà</span></a></li>
+                    <li><a href="#"><span>Thời trang</span></a>
                     </li>
-                    <li><a href="#"><span>Shop</span></a></li>
+                    <li><a href="#"><span>Cửa hàng</span></a></li>
                 </ol>
             </nav>
+            <div class="woocommerce-ordering">
+                <form method="POST" action="./shop.php" style="display: flex;">
+                    <input class="text_input" value="" name="input_search" placeholder="Tìm kiếm" type="text">
+                    <button type="submit" name="search"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
@@ -62,7 +69,7 @@ $dstop3 = hanghoa_top5();
             <div class="col-lg-9 shop-content">
                 <div class="product-toolbar">
                     <div class="topbar-title">
-                        <h1>Arts & Crafts</h1>
+                        <h1>Sản Phẩm Chính Hãng</h1>
                     </div>
                     <div class="product-toolbar-inner">
                         <div class="product-view-mode">
@@ -72,7 +79,7 @@ $dstop3 = hanghoa_top5();
                             </ul>
                         </div>
                         <div class="woocommerce-ordering">
-                            <form method="get" class="woocommerce-ordering hidden-xs">
+                            <form method="post" class="woocommerce-ordering hidden-xs d-flex ">
                                 <div class="orderby-wrapper">
                                     <label>Phân loại :</label>
                                     <select class="nice-select-menu orderby" name='filter' type='submit'>
@@ -82,6 +89,7 @@ $dstop3 = hanghoa_top5();
                                         <?php endforeach ?>
                                     </select>
                                 </div>
+                                <button name='filter_btn' class='bg-white d-flex align-items-center'><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>
@@ -91,9 +99,10 @@ $dstop3 = hanghoa_top5();
                                 <!-- single product -->
 
                                 <?php foreach ($hang as $key => $value) : ?>
-                                    <form action="../user/controller/cart/add_cart.php" method="POST">
-                                        <div class="col-sm-6 col-md-6 col-lg-4">
-                                            <div class="product-miniature js-product-miniature">
+
+                                    <div class="col-sm-6 col-md-6 col-lg-4">
+                                        <div class="product-miniature js-product-miniature">
+                                            <form action="../user/controller/cart/add_cart.php" method="POST">
                                                 <div class="img_block">
                                                     <input type="hidden" name="id" value="<?php echo $value["id"] ?>">
                                                     <input type="hidden" name="image" value="<?php echo $value["hinh_anh"] ?>">
@@ -113,13 +122,14 @@ $dstop3 = hanghoa_top5();
                                                     </div>
                                                     <div class="cart">
                                                         <div class="product-add-to-cart">
-                                                            <a><button type='submit' name="addcart">Add to cart</button></a>
+                                                            <a><button type='submit' name="cart.php">Thêm vào giỏ hàng</button></a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
-                                    </form>
+                                    </div>
+
                                 <?php endforeach ?>
                                 <!-- single product end -->
                             </div>
@@ -139,7 +149,7 @@ $dstop3 = hanghoa_top5();
                                                         <img src="assets/images/product/<?php echo $value['hinh_anh'] ?>" alt="harosa product">
                                                     </a>
                                                     <ul class="product-flag">
-                                                        <li class="new"><span>New</span></li>
+                                                        <li class="new"><span>Mới</span></li>
                                                     </ul>
                                                     <div class="quick-view">
                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
@@ -155,7 +165,7 @@ $dstop3 = hanghoa_top5();
                                                     </div>
                                                     <div class="cart">
                                                         <div class="product-add-to-cart">
-                                                            <a><button type='submit' name="addcart">Add to cart</button></a>
+                                                            <a><button type='submit' name="cart.php">Thêm vào giỏ hàng</button></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -180,7 +190,7 @@ $dstop3 = hanghoa_top5();
             <div class="col-lg-3 sidebar-shop">
                 <div class="sidebar-product-categori">
                     <div class="shop-categori-title">
-                        <h3>Arts & Crafts</h3>
+                        <h3>Chăm sóc sắc đẹp</h3>
                     </div>
                     <div class="product-filter mb-30">
                     </div>
@@ -191,7 +201,7 @@ $dstop3 = hanghoa_top5();
                     <div class="shop-categori-page categori-mini-product-area">
                         <div class="pos-featured-products  product_block_container">
                             <div class="pos_title">
-                                <h2>New products</h2>
+                                <h2>Sản phẩm mới</h2>
                             </div>
                         </div>
                         <div class=" pos_content row">
@@ -207,7 +217,7 @@ $dstop3 = hanghoa_top5();
                                             </div>
                                             <div class="product_desc">
                                                 <div class="manufacturer">
-                                                    <a href="#">Graphic Corner</a>
+                                                    <a href="#">Góc đồ mới</a>
                                                 </div>
                                                 <h1><a href="shop_detail.php?id=<?php echo $value["id"] ?>"><?php echo $value["mo_ta"] ?></a></h1>
                                                 <div class="product-price-and-shipping">

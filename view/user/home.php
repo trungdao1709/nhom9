@@ -28,9 +28,9 @@ $hang = getAll($query);
                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"><i class="first-icon fa fa-user-circle"></i> My Account</button>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <ul class="offcanvas-meta">
-                        <li><a href="login.html">My Account</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="register.html">Sign in</a></li>
+                        <li><a href="login.html">Tài khoản của tôi</a></li>
+                        <li><a href="checkout.html">Thủ tục thanh toán</a></li>
+                        <li><a href="register.html">Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,13 +50,13 @@ $hang = getAll($query);
                         <li>
                             <a href="#">
                                 <img src="assets/images/icons/en.webp" alt="French">
-                                <span>English</span>
+                                <span>Tiếng Anh</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="assets/images/icons/fr.webp" alt="French">
-                                <span>French</span>
+                                <span>người Pháp</span>
                             </a>
                         </li>
                     </ul>
@@ -65,7 +65,7 @@ $hang = getAll($query);
         </div>
         <nav class="canvas-menu">
             <ul>
-                <li class="current"><a href="index.html">Home</a>
+                <li class="current"><a href="index.html">Nhà</a>
                     <ul class="sub-menu">
                         <li><a href="index.html">Home Shop 1</a></li>
                         <li><a href="index-2.html">Home Shop 2</a></li>
@@ -75,13 +75,13 @@ $hang = getAll($query);
                         <li><a href="index-6.html">Home Shop 6</a></li>
                     </ul>
                 </li>
-                <li><a href="shop.html">Shop</a></li>
+                <li><a href="shop.html">Cửa Hàng</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="#">Features </a>
+                <li><a href="about-us.html">Về chúng tôi</a></li>
+                <li><a href="contact-us.html">Liên hệ</a></li>
+                <li><a href="#">Đặc trưng </a>
                     <ul class="mega-sub-menu">
-                        <li><a href="#">Pages</a>
+                        <li><a href="#">trang</a>
                             <ul class="sub-menu">
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="contact-us.html">Contact Us</a></li>
@@ -171,9 +171,9 @@ $hang = getAll($query);
     <div class="container">
 
         <ul class="nav tabs_slider">
-            <li class="active"><a href="#newarrival" data-toggle="tab">New Arrival</a></li>
-            <li><a href="#bestseller" data-toggle="tab">Bestseller</a></li>
-            <li><a href="#featuredproducts" data-toggle="tab">Featured Products</a></li>
+            <li class="active"><a href="#newarrival" data-toggle="tab">Hàng mới về</a></li>
+            <li><a href="#bestseller" data-toggle="tab">Người bán hàng giỏi nhất</a></li>
+            <li><a href="#featuredproducts" data-toggle="tab">Sản phẩm nổi bật</a></li>
         </ul>
         <div class="tab-content pos_content">
             <div class="tab-pane fade show active" id="newarrival">
@@ -203,7 +203,7 @@ $hang = getAll($query);
                                         </div>
                                         <div class="cart">
                                             <div class="product-add-to-cart">
-                                                <a><button type='submit' name="addcart">Add to cart</button></a>
+                                                <a><button type='submit' name="addcart">Thêm vào giỏ hàng</button></a>
                                             </div>
                                         </div>
                                     </div>
@@ -224,10 +224,10 @@ $hang = getAll($query);
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="info-content">
-                                    <h4>About Us</h4>
-                                    <h2>Welcome <span>Harosa</span> Store.</h2>
-                                    <p>Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus</p>
-                                    <a href="#">Read More</a>
+                                    <h4>Về chúng tôi</h4>
+                                    <h2>Chào mừng <span>Harosa</span> Cửa hàng</h2>
+                                    <p>Ngày nay, làm đẹp được xem là một nhu cầu quan trọng và thiết yếu của cuộc sống. Cũng chính vì vậy mà các doanh nghiệp, nhà sản xuất cho ra đời rất nhiều loại mỹ phẩm chăm sóc sắc đẹp khác nhau. </p>
+                                    <a href="./about-us.php">Đọc thêm</a>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -245,7 +245,7 @@ $hang = getAll($query);
                 <div class="container">
                     <div class="special-products">
                         <div class="pos_title">
-                            <h2>Daily Deals</h2>
+                            <h2>Ưu đãi hàng ngày</h2>
                         </div>
                         <div class="special-item1 pos_content owl-carousel">
                             <!-- special item -->
@@ -261,7 +261,7 @@ $hang = getAll($query);
                                                 <img src="assets/images/product/<?php echo $value["hinh_anh"] ?>" alt="harosa product">
                                             </a>
                                             <ul class="product-flag">
-                                                <li class="new"><span>New</span></li>
+                                                <li class="new"><span>Mới</span></li>
                                             </ul>
                                             <div class="quick-view">
                                                 <a href="#" data-toggle="modal" data-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
@@ -283,7 +283,7 @@ $hang = getAll($query);
                                             </div>
                                             <div class="cart">
                                                 <div class="product-add-to-cart">
-                                                    <a><button type='submit' name="addcart">Add to cart</button></a>
+                                                    <a><button type='submit' name="addcart">Thêm vào giỏ hàng</button></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -309,11 +309,11 @@ $hang = getAll($query);
             <div class="cms_container">
                 <div class="container">
                     <div class="info_content">
-                        <p class="txt1">Something mystic, Something magical...</p>
-                        <h2>Natural Spa</h2>
+                        <p class="txt1">Một cái gì đó thần bí, một cái gì đó kì diệu...</p>
+                        <h2>Spa tự nhiên</h2>
                         <p class="phone">(+08) 123 456 7890</p>
-                        <p class="txt2">Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor, lacus in luctus molestie</p>
-                        <a href="#">Shop Collection in new year</a>
+                        <p class="txt2">Ngày nay, làm đẹp được xem là một nhu cầu quan trọng và thiết yếu của cuộc sống. Cũng chính vì vậy mà các doanh nghiệp, nhà sản xuất cho ra đời rất nhiều loại mỹ phẩm chăm sóc sắc đẹp khác nhau. </p>
+                        <a href="#">Bộ sưu tầm cửa hàng trong năm</a>
                     </div>
                 </div>
             </div>

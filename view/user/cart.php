@@ -20,12 +20,12 @@ if (isset($_SESSION['cart'])) {
                 <ol>
                     <li>
                         <a href="#">
-                            <span>Home </span>
+                            <span>Nhà </span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span>Cart</span>
+                            <span>Cửa hàng</span>
                         </a>
                     </li>
                 </ol>
@@ -45,12 +45,12 @@ if (isset($_SESSION['cart'])) {
                 <table>
                     <thead>
                         <tr>
-                            <th class="product-thumbnail">Image</th>
-                            <th class="product-name">Product</th>
-                            <th class="product-price">Price</th>
-                            <th class="product-quantity">Quantity</th>
-                            <th class="product-subtotal">Total</th>
-                            <th class="product-remove">Remove </th>
+                            <th class="product-thumbnail">Hình ảnh</th>
+                            <th class="product-name">Sản phẩm</th>
+                            <th class="product-price">Giá bán</th>
+                            <th class="product-quantity">Số lượng</th>
+                            <th class="product-subtotal">Tổng cộng</th>
+                            <th class="product-remove">Loại bỏ</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,24 +87,24 @@ if (isset($_SESSION['cart'])) {
                 <!-- Cart Button Start -->
                 <div class="col-md-8 col-sm-7">
                     <div class="buttons-cart">
-                        <input type="submit" value="Update Cart">
-                        <a href="shop.php">Continue Shopping</a>
+                        <input type="submit" value="Cập nhật giỏ hàng">
+                        <a href="shop.php">Tiếp tục mua sắm</a>
                     </div>
                 </div>
                 <!-- Cart Button Start -->
                 <!-- Cart Totals Start -->
                 <div class="col-md-4 col-sm-5">
                     <div class="cart_totals">
-                        <h2>Cart Totals</h2>
+                        <h2>Tổng số giỏ hàng</h2>
                         <br>
                         <table>
                             <tbody>
                                 <tr class="cart-subtotal">
-                                    <th>Subtotal</th>
+                                    <th>Tổng phụ</th>
                                     <td><span class="amount">$<?php echo $tong ?></span></td>
                                 </tr>
                                 <tr class="order-total">
-                                    <th>Total</th>
+                                    <th>Tộng cộng</th>
                                     <td>
                                         <strong><span class="amount">$<?php echo $tong ?></span></strong>
                                     </td>

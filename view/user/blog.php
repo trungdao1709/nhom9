@@ -15,7 +15,7 @@ include 'inc/header.php'
                 
                 <div class="contact-link">
                     <div class="info_box phone">
-                        Call us : <span>(012) 800 456 789</span>
+                        Gọi cho chúng tôi : <span>(012) 800 456 789</span>
                     </div>
                     <div class="info_box email">
                         email :  <a href="mailto:demo@example.com">demo@example.com</a>
@@ -27,7 +27,7 @@ include 'inc/header.php'
                         <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"><i class="first-icon fa fa-user-circle"></i> My Account</button>
                         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <ul class="offcanvas-meta">
-                                <li><a href="login.html">My Account</a></li>
+                                <li><a href="login.html">Tài khoản của tôi</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
                                 <li><a href="register.html">Sign in</a></li>
                             </ul>
@@ -138,12 +138,12 @@ include 'inc/header.php'
                         <ol>
                             <li>
                                 <a href="#">
-                                <span>Home</span>
+                                <span>Nhà</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                <span>Blog Page</span>
+                                <span>Trang blog</span>
                                 </a>
                             </li>
                         </ol>
@@ -164,23 +164,23 @@ include 'inc/header.php'
                             <article class="text-center">
                                 <div class="blog-entry-header">
                                     <div class="post-category">
-                                        <a href="#">Fashion</a>
-                                        <a href="#">Template</a>
+                                        <a href="#">Thời trang</a>
+                                        <a href="#">Mẫu</a>
                                     </div>
-                                    <h1><a href="single-blog.html">Blog image post</a></h1>
+                                    <h1><a href="single-blog.html">bài đăng hình ảnh trên blog</a></h1>
                                     <div class="post-meta">
-                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Posted by admin</a>
-                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> March 10, 2018 </a>
+                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Đăng bởi quản trị viên</a>
+                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> 10 Tháng Ba, 2018 </a>
                                     </div>
                                 </div>
                                 <div class="post-thumbnail">
                                     <a href="single-blog.html"><img src="assets/images/blog/blog1.webp" alt="bege blog images"></a>
                                 </div>
                                 <div class="postinfo-wrapper">
-                                    <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor</p>
-                                    <a class="readmore button" href="single-blog.html">Read more</a>
+                                    <p>Tất cả đều là hàng 100% chuẩn Auth, tuyệt đối nói không với hàng fake, bao test các kiểu. Loại bỏ tất cả những loại mỹ phẩm hàng giả, hàng nhái, hàng Trung Quốc ra khỏi thị trường và tiềm thức của chính người mua hàng.</p>
+                                    <a class="readmore button" href="single-blog.html">Đọc thêm</a>
                                     <div class="social-sharing">
-                                        <h3>Share this post</h3>
+                                        <h3>Chia sẻ bài đăng này</h3>
                                         <div class="social-sharie">
                                             <ul class="social-icons">
                                                 <li><a class="facebook social-icon" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -198,13 +198,13 @@ include 'inc/header.php'
                             <article class="text-center">
                                 <div class="blog-entry-header">
                                     <div class="post-category">
-                                        <a href="#">GALLERY</a>
-                                        <a href="#">Template</a>
+                                        <a href="#">PHÒNG TRƯNG BÀY</a>
+                                        <a href="#">Mẫu</a>
                                     </div>
-                                    <h1><a href="single-blog.html">POST WITH GALLERY</a></h1>
+                                    <h1><a href="single-blog.html">BÀI BẰNG GALLERY</a></h1>
                                     <div class="post-meta">
-                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Posted by admin</a>
-                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> March 10, 2018 </a>
+                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Đăng bởi quản trị viên</a>
+                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> 10 Tháng Ba, 2018</a>
                                     </div>
                                 </div>
                                 <div class="gallery-post  owl-carousel">
@@ -214,10 +214,10 @@ include 'inc/header.php'
                                 </div>
                                 <div class="postinfo-wrapper">
                                     <br>
-                                    <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor</p>
-                                    <a class="readmore button" href="single-blog.html">Read more</a>
+                                    <p>Nhằm đảm bảo chất lượng của mỹ phẩm không bị biến đổi do vận chuyển chúng tôi đã lựa chọn cách thức chuyển hàng bằng đường hàng không thay vì đường biển. Vì vậy, ngay sau khi chốt order, xác nhận đơn hàng và khách hàng chuyển tiền trong thời gian không lâu thì hàng về đến Việt Nam và được trao tận tay cho bạn.</p>
+                                    <a class="readmore button" href="single-blog.html">Đọc thêm</a>
                                     <div class="social-sharing">
-                                        <h3>Share this post</h3>
+                                        <h3>Chia sẻ bài đăng này</h3>
                                         <div class="social-sharie">
                                             <ul class="social-icons">
                                                 <li><a class="facebook social-icon" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -237,20 +237,20 @@ include 'inc/header.php'
                                     <div class="post-category">
                                         <a href="#">VIDEOS</a>
                                     </div>
-                                    <h1><a href="single-blog.html">POST WITH VIDEO</a></h1>
+                                    <h1><a href="single-blog.html">BÀI ĐĂNG CÓ VIDEO</a></h1>
                                     <div class="post-meta">
-                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Posted by admin</a>
-                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> March 10, 2018 </a>
+                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Đăng bởi quản trị viên</a>
+                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> 10 Tháng Ba, 2018 </a>
                                     </div>
                                 </div>
                                 <div class="post-thumbnail">
                                     <iframe src="https://www.youtube.com/embed/Q6dsRpVyyWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                 </div>
                                 <div class="postinfo-wrapper">
-                                    <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor</p>
-                                    <a class="readmore button" href="single-blog.html">Read more</a>
+                                    <p>Các sản phẩm của chúng tôi hoàn toàn là hàng xách tay của những thương hiệu nổi tiếng như: mỹ phẩm Tenna, bà già Agafi, CMO, Organic Shop, Pure Line…. Vì vậy bạn hoàn toàn yên tâm về chất lượng, mức độ an toàn và hiệu quả mà sản phẩm mang lại.</p>
+                                    <a class="readmore button" href="single-blog.html">Đọc thêm</a>
                                     <div class="social-sharing">
-                                        <h3>Share this post</h3>
+                                        <h3>Chia sẻ bài đăng này</h3>
                                         <div class="social-sharie">
                                             <ul class="social-icons">
                                                 <li><a class="facebook social-icon" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -268,23 +268,23 @@ include 'inc/header.php'
                             <article class="text-center">
                                 <div class="blog-entry-header">
                                     <div class="post-category">
-                                        <a href="#">AUDIO</a>
-                                        <a href="#">Template</a>
+                                        <a href="#">ÂM THANH</a>
+                                        <a href="#">Mẫu</a>
                                     </div>
-                                    <h1><a href="single-blog.html">POST WITH AUDIO</a></h1>
+                                    <h1><a href="single-blog.html">ĐĂNG BẰNG ÂM THANH</a></h1>
                                     <div class="post-meta">
-                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Posted by admin</a>
-                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> March 10, 2018 </a>
+                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Đăng bởi quản trị viên</a>
+                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> 10 Tháng Ba, 2018</a>
                                     </div>
                                 </div>
                                 <div class="post-thumbnail">
                                     <iframe width="100%" height="auto" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/68283293&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
                                 </div>
                                 <div class="postinfo-wrapper">
-                                    <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor</p>
-                                    <a class="readmore button" href="single-blog.html">Read more</a>
+                                    <p>Các sản phẩm của chúng tôi hoàn toàn là hàng xách tay của những thương hiệu nổi tiếng như: mỹ phẩm Tenna, bà già Agafi, CMO, Organic Shop, Pure Line…. Vì vậy bạn hoàn toàn yên tâm về chất lượng, mức độ an toàn và hiệu quả mà sản phẩm mang lại.</p>
+                                    <a class="readmore button" href="single-blog.html">Đọc thêm</a>
                                     <div class="social-sharing">
-                                        <h3>Share this post</h3>
+                                        <h3>Chia sẻ bài đăng này</h3>
                                         <div class="social-sharie">
                                             <ul class="social-icons">
                                                 <li><a class="facebook social-icon" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -302,23 +302,23 @@ include 'inc/header.php'
                             <article class="text-center">
                                 <div class="blog-entry-header">
                                     <div class="post-category">
-                                        <a href="#">Fashion</a>
-                                        <a href="#">Template</a>
+                                        <a href="#">Thời trang</a>
+                                        <a href="#">Mẫu</a>
                                     </div>
-                                    <h1><a href="single-blog.html">Blog image post</a></h1>
+                                    <h1><a href="single-blog.html">ĐĂNG BẰNG ÂM THANH</a></h1>
                                     <div class="post-meta">
-                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Posted by admin</a>
-                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> March 10, 2018 </a>
+                                        <a href="#"  class="post-author"><i class="fa fa-user"></i>Đăng bởi quản trị viên</a>
+                                        <a href="#" class="post-date"><i class="fa fa-calendar"></i> 10 Tháng Ba, 2018</a>
                                     </div>
                                 </div>
                                 <div class="post-thumbnail">
-                                    <a href="single-blog.html"><img src="assets/images/blog/blog5.webp" alt="bege blog images"></a>
+                                    <iframe width="100%" height="auto" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/68283293&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
                                 </div>
                                 <div class="postinfo-wrapper">
-                                    <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Praesent ornare tortor</p>
-                                    <a class="readmore button" href="single-blog.html">Read more</a>
+                                    <p>Các sản phẩm của chúng tôi hoàn toàn là hàng xách tay của những thương hiệu nổi tiếng như: mỹ phẩm Tenna, bà già Agafi, CMO, Organic Shop, Pure Line…. Vì vậy bạn hoàn toàn yên tâm về chất lượng, mức độ an toàn và hiệu quả mà sản phẩm mang lại.</p>
+                                    <a class="readmore button" href="single-blog.html">Đọc thêm</a>
                                     <div class="social-sharing">
-                                        <h3>Share this post</h3>
+                                        <h3>Chia sẻ bài đăng này</h3>
                                         <div class="social-sharie">
                                             <ul class="social-icons">
                                                 <li><a class="facebook social-icon" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -337,7 +337,7 @@ include 'inc/header.php'
                         <div class="pagination">
                             <span aria-current="page" class="page-numbers current">1</span>
                             <a class="page-numbers" href="#">2</a>
-                            <a class="next page-numbers" href="#">Next</a>
+                            <a class="next page-numbers" href="#">Tiếp theo</a>
                         </div>
                         
                     </div>
@@ -346,7 +346,7 @@ include 'inc/header.php'
                             <div class="row_products_side">
                                 <div class="product_left_sidbar">
                                     <div class="product-filter  mb-30">
-                                        <h5>Search </h5>
+                                        <h5>Tiềm kiếm </h5>
                                         <div class="search__sidbar">
                                             <div class="input_form">
                                             <input type="text" id="search_input" name="s" value="Search..." class="input_text">
@@ -357,31 +357,31 @@ include 'inc/header.php'
                                         </div>
                                     </div>
                                     <div class="product-filter  mb-30">
-                                        <h5>Blog Archives </h5>
+                                        <h5>Lưu trữ blog </h5>
                                         <div class="blog_Archives__sidbar">
                                             <ul>
                                                 <li>
-                                                    <a href="#">March 2015</a>&nbsp;(1)</li>
+                                                    <a href="#">tháng 3 năm 2015</a>&nbsp;(1)</li>
                                                 <li>
-                                                    <a href="#">December 2014</a>&nbsp;(3)</li>
+                                                    <a href="#">tháng 12 năm 2014</a>&nbsp;(3)</li>
                                                 <li>
-                                                    <a href="#">November 2014</a>&nbsp;(4)</li>
+                                                    <a href="#">tháng 11 năm 2014</a>&nbsp;(4)</li>
                                                 <li>
-                                                    <a href="#">September 2014</a>&nbsp;(1)</li>
+                                                    <a href="#">tháng 9 năm 2014</a>&nbsp;(1)</li>
                                                 <li>
-                                                    <a href="#">August 2014</a>&nbsp;(1)</li>
+                                                    <a href="#">tháng 8 năm 2014</a>&nbsp;(1)</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="product-filter  mb-30">
-                                        <h5>Recent Posts</h5>
+                                        <h5>Bài viết gần đây</h5>
                                         <div class="blog_Archives__sidbar">
                                             <ul>
-                                                <li> <a href="#">Blog image post</a>&nbsp;(1)</li>
-                                                <li> <a href="#">Post with Gallery</a>&nbsp;(3)</li>
-                                                <li><a href="#">Post with Audio</a>&nbsp;(4)</li>
-                                                <li><a href="#">Post with Video</a>&nbsp;(1)</li>
-                                                <li><a href="#">Post with Text</a>&nbsp;(1)</li>
+                                                <li> <a href="#">bài đăng hình ảnh trên blog</a>&nbsp;(1)</li>
+                                                <li> <a href="#">Đăng với Thư viện</a>&nbsp;(3)</li>
+                                                <li><a href="#">Đăng có âm thanh</a>&nbsp;(4)</li>
+                                                <li><a href="#">Đăng với Video</a>&nbsp;(1)</li>
+                                                <li><a href="#">Đăng với văn bản</a>&nbsp;(1)</li>
                                                 
                                             </ul>
                                         </div>
@@ -392,18 +392,18 @@ include 'inc/header.php'
                                         </a>
                                     </div>
                                     <div class="product-filter mb-30">
-                                        <h5>product tags</h5>
+                                        <h5>Thẻ sản phẩm</h5>
                                         <div class="blog-tags">
-                                            <a href="#">brand</a>
-                                            <a href="#">black</a>
-                                            <a href="#">white</a>
-                                            <a href="#">chire</a>
-                                            <a href="#">table</a>
+                                            <a href="#">nhãn hiệu</a>
+                                            <a href="#">màu đen</a>
+                                            <a href="#">màu trắng</a>
+                                            <a href="#">chíp chíp</a>
+                                            <a href="#">bảng</a>
                                             <a href="#">Lorem</a>
                                             <a href="#">ipsum</a>
-                                            <a href="#">dolor</a>
-                                            <a href="#">sit</a>
-                                            <a href="#">amet</a>
+                                            <a href="#">Màu sắc</a>
+                                            <a href="#">Cuốn hút</a></a>
+                                            <a href="#">yêu thương</a>
                                         </div>
                                     </div>
                                 </div>
