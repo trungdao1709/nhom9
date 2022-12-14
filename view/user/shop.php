@@ -29,7 +29,12 @@ if (isset($_POST['filter_btn'])) {
         $hang = findCategory($filter);
     }
 }
-
+function hanghoa_top5()
+{
+    $sql = "SELECT * FROM `hang` WHERE 1 order by `id` desc limit 5";
+    return getAll($sql);
+}
+$dstop3 = hanghoa_top5();
 
 ?>
 
