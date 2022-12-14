@@ -20,6 +20,16 @@ if (isset($_POST["search"])) {
     $query = "select * from hang";
     $hang = getAll($query);
 }
+if (isset($_POST['filter_btn'])) {
+    $filter = $_POST['filter'];
+    if ($filter == 'all') {
+        $querySearch = "select * from hang where ten_hang like '%$search%'";
+        $hang = getAll($querySearch);
+    } else {
+        $hang = findCategory($filter);
+    }
+}
+
 
 ?>
 
