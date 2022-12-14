@@ -6,7 +6,12 @@ function getCategory()
     $sql = 'SELECT * FROM loai_hang';
     return getAll($sql);
 }
-
+function findCategory($id)
+{
+    $sql = "SELECT * FROM hang WHERE id_loai_hang  ='$id'";
+    return getAll($sql);
+}
+$allCate = getCategory();
 
 ?>
 
