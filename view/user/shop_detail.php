@@ -2,7 +2,8 @@
 include 'inc/header.php';
 include "model/config.php";
 $id= $_GET['id'];
-
+$query = "select * from hang where id = $id";
+$hang = getOne($query);
 ?>
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
