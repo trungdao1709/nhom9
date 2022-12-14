@@ -12,6 +12,14 @@ function findCategory($id)
     return getAll($sql);
 }
 $allCate = getCategory();
+if (isset($_POST["search"])) {
+    $search = $_POST["input_search"];
+    $querySearch = "select * from hang where ten_hang like '%$search%'";
+    $hang = getAll($querySearch);
+} else {
+    $query = "select * from hang";
+    $hang = getAll($query);
+}
 
 ?>
 
