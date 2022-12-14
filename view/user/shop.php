@@ -84,9 +84,7 @@ $dstop3 = hanghoa_top5();
                                     <label>Phân loại :</label>
                                     <select class="nice-select-menu orderby" name='filter' type='submit'>
                                         <option dara-display="Select" value='all'>Tất cả</option>
-                                        <?php foreach ($allCate as $value) : ?>
-                                            <option value="<?php echo $value['id'] ?>"><?php echo $value['ten_loai_hang'] ?></option>
-                                        <?php endforeach ?>
+                                       
                                     </select>
                                 </div>
                                 <button name='filter_btn' class='bg-white d-flex align-items-center'><i class="fa fa-search"></i></button>
