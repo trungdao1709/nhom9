@@ -6,35 +6,7 @@ function getCategory()
     $sql = 'SELECT * FROM loai_hang';
     return getAll($sql);
 }
-function findCategory($id)
-{
-    $sql = "SELECT * FROM hang WHERE id_loai_hang  ='$id'";
-    return getAll($sql);
-}
-$allCate = getCategory();
-if (isset($_POST["search"])) {
-    $search = $_POST["input_search"];
-    $querySearch = "select * from hang where ten_hang like '%$search%'";
-    $hang = getAll($querySearch);
-} else {
-    $query = "select * from hang";
-    $hang = getAll($query);
-}
-if (isset($_POST['filter_btn'])) {
-    $filter = $_POST['filter'];
-    if ($filter == 'all') {
-        $querySearch = "select * from hang where ten_hang like '%$search%'";
-        $hang = getAll($querySearch);
-    } else {
-        $hang = findCategory($filter);
-    }
-}
-function hanghoa_top5()
-{
-    $sql = "SELECT * FROM `hang` WHERE 1 order by `id` desc limit 5";
-    return getAll($sql);
-}
-$dstop3 = hanghoa_top5();
+
 
 ?>
 
